@@ -1,0 +1,97 @@
+.qbc-status-sec{
+    &__outer{
+        display: flex;
+        margin: 0 -8px;
+    }
+    &__item{
+        width: calc(20% - 16px);
+        margin: 0 8px;
+        &--logo{
+            .qbc-status-sec__subtitle{
+                margin: 0 auto;
+                width: 60%;
+                font-size: 18px;
+                font-weight: 600;
+                span{
+                    color: #A20C33;
+                }
+            }
+        }
+    }
+    &__title{
+        color: #A20C33;
+        font-size: 64px;
+        font-weight: 500;
+        margin-bottom: 8px;
+        text-align: center;
+        line-height: 1;
+    }
+    &__subtitle{
+        color: #231F20;
+        font-size: 16px;
+        font-weight: 600;
+        margin-bottom: 8px;
+        text-align: center;
+    }
+    &__para{
+        color: #231F20;
+        font-size: 16px;
+        font-weight: 400;
+        text-align: center;
+    }
+    &__img{
+        margin: 0 auto;
+        width: 170px;
+        height: auto;
+        img{
+            width: 100%;
+        }
+    }
+}
+
+@include tablet{
+    .qbc-status-sec{
+        &__outer{
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        &__item{
+            width: calc(50% - 16px);
+            margin: 0 8px 24px;
+        }
+        &__title{
+            font-size: 50px;
+        }
+        &__img{
+            margin: 0 auto;
+            width: 140px;
+            height: auto;
+            img{
+                width: 100%;
+            }
+        }
+    }
+}
+
+@include mobile{
+    .qbc-status-sec{
+        &__outer{
+            flex-direction: column;
+        }
+        &__item{
+            width: calc(100% - 16px);
+            margin: 0 8px 24px;
+        }
+        &__title{
+            font-size: 50px;
+        }
+        &__img{
+            margin: 0 auto;
+            width: 140px;
+            height: auto;
+            img{
+                width: 100%;
+            }
+        }
+    }
+}

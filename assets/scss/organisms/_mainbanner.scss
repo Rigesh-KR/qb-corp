@@ -5,6 +5,7 @@
     min-height: 400px;
     display: flex;
     align-items: center;
+
     &__bg{
         position: absolute;
         width: 100%;
@@ -72,7 +73,7 @@
 
 @include tablet{
     .qbc-mainbanner{
-        min-height: unset;
+        min-height: 300px;
         &__head{
             width: 60%;
             font-size: 50px;
@@ -94,7 +95,7 @@
 
 @include mobile{
     .qbc-mainbanner{
-        min-height: unset;
+        min-height: 250px;
         &__head{
             width: 100%;
             font-size: 50px;
