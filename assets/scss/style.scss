@@ -5,3 +5,12 @@
 @import "base/reset";
 @import "base/base";
 @import "base/dev";
+
+// atoms
+@import "atoms/headings";
+
+// organisms
+@import "organisms/tab-products";
+@import "organisms/tab-brands";
+@import "organisms/tab-partners";
+@import "organisms/tab-facilities";

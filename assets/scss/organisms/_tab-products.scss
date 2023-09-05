@@ -1,0 +1,136 @@
+.qbc-prdct {
+  &__main {
+    .qbc-heading {
+      text-align: center;
+    }
+    .qbc-heading__text {
+      text-align: center;
+      width: 60%;
+      margin: 0 auto $spacer-6;
+    }
+  }
+
+  &__tiles {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -8px;
+  }
+  &__tile {
+    width: calc(16.66% - 16px);
+    margin: 0 8px 24px;
+    border-radius: 10px;
+    border: 1px solid #6797d4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: $spacer-3;
+    &--cv1 {
+      border-color: #d97a49;
+      .qbc-prdct__tile-txt {
+        color: #d97a49;
+      }
+    }
+    &--cv2 {
+      border-color: #4fa77c;
+      .qbc-prdct__tile-txt {
+        color: #4fa77c;
+      }
+    }
+    &--cv3 {
+      border-color: #4ca2b2;
+      .qbc-prdct__tile-txt {
+        color: #4ca2b2;
+      }
+    }
+    &--cv4 {
+      border-color: #8c60c9;
+      .qbc-prdct__tile-txt {
+        color: #8c60c9;
+      }
+    }
+    &--cv5 {
+      border-color: #db577b;
+      .qbc-prdct__tile-txt {
+        color: #db577b;
+      }
+    }
+    &--cv6 {
+      border-color: #545deb;
+      .qbc-prdct__tile-txt {
+        color: #545deb;
+      }
+    }
+    &--cv7 {
+      border-color: #b0439a;
+      .qbc-prdct__tile-txt {
+        color: #b0439a;
+      }
+    }
+    &--cv8 {
+      border-color: #728792;
+      .qbc-prdct__tile-txt {
+        color: #728792;
+      }
+    }
+    &--cv9 {
+      border-color: #de706c;
+      .qbc-prdct__tile-txt {
+        color: #de706c;
+      }
+    }
+    &--cv10 {
+      border-color: #3d5993;
+      .qbc-prdct__tile-txt {
+        color: #3d5993;
+      }
+    }
+    &-img {
+      height: 100px;
+      margin: 0 0 $spacer-3 0;
+      display: flex;
+      justify-content: center;
+
+      img {
+        // width: 100%;
+        height: 100%;
+      }
+    }
+    &-txt {
+      text-align: center;
+      font-size: 15px;
+      color: #6797d4;
+    }
+  }
+}
+
+@include tablet {
+  .qbc-prdct {
+    &__main {
+      .qbc-heading__text {
+        text-align: center;
+        width: 100%;
+        margin: 0 auto;
+      }
+    }
+
+    &__tile {
+      width: calc(33.33% - 16px);
+    }
+  }
+}
+
+@include mobile {
+  .qbc-prdct {
+    &__main {
+      .qbc-heading__text {
+        text-align: center;
+        width: 100%;
+        margin: 0 auto;
+      }
+    }
+
+    &__tile {
+      width: calc(100% - 16px);
+    }
+  }
+}

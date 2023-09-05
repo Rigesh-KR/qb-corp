@@ -1,0 +1,125 @@
+.qbc-partners {
+  display: flex;
+  &__body {
+    width: 40%;
+    padding-left: $spacer-6;
+    order: 2;
+  }
+  .qbc-prdct__tiles {
+    &-outr {
+      display: flex;
+      flex: 1;
+    }
+    width: 50%;
+    justify-content: end;
+    align-items: flex-start;
+
+    &:first-child {
+      border-right: 1px solid #f0e4c9;
+      padding-right: $spacer-4;
+      margin-right: $spacer-4;
+    }
+    &--v2 {
+      justify-content: flex-start;
+    }
+  }
+  &__tile {
+    width: calc(50% - 16px);
+    margin: 0 8px $spacer-3;
+    border-radius: 10px;
+    border: 1px solid #f0e4c9;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    padding: $spacer-3 $spacer-3;
+
+    &-head {
+      color: $color-yellow;
+      font-weight: $font-semi-bold;
+      text-transform: uppercase;
+      font-size: 13px;
+      &--v2 {
+        color: $color-red;
+      }
+    }
+
+    &-count {
+      color: $color-grey;
+      text-transform: uppercase;
+      font-size: 80px;
+      line-height: 1;
+    }
+    &--v1 {
+      min-height: 165px;
+    }
+    &--v2 {
+      padding: 0;
+      border: 0;
+      align-self: end;
+      .qbc-prdct__tile-img {
+        margin: 0;
+        justify-content: flex-start;
+      }
+    }
+    &--v3 {
+      width: 40%;
+      justify-content: end;
+      min-height: 135px;
+      .qbc-partners__tile-head {
+        order: 2;
+      }
+    }
+    &--v4 {
+      min-height: 160px;
+      justify-content: flex-start;
+      .qbc-partners__tile-count {
+        font-size: 50px;
+      }
+    }
+  }
+  .qbc-heading__text {
+    margin-bottom: $spacer-4;
+  }
+}
+
+@include tablet {
+  .qbc-partners {
+    flex-direction: column;
+    &__body {
+      width: 100%;
+      padding-left: $spacer-0;
+      order: 1;
+    }
+    .qbc-prdct__tiles-outr {
+      order: 2;
+    }
+  }
+}
+@include mobile {
+  .qbc-partners {
+    flex-direction: column;
+    &__body {
+      width: 100%;
+      padding-left: $spacer-0;
+      order: 1;
+    }
+    .qbc-prdct__tiles-outr {
+      order: 2;
+    }
+    .qbc-prdct__tiles {
+      &-outr {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+      }
+      width: 100%;
+      padding: 0 !important;
+      margin: 0 !important;
+      border: 0 !important;
+    }
+    &__tile {
+      width: calc(50% - 16px) !important;
+      min-height: 150px !important;
+    }
+  }
+}
