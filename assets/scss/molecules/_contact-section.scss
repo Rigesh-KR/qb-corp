@@ -1,0 +1,95 @@
+.qbc-cont{
+    color: #F7F1E5;
+    display: flex;
+    flex-direction: column;
+    min-height: 75px;
+    &__head{
+        font-size: 13px;
+        font-weight: 600;
+        margin-bottom: 16px;
+        span{
+            margin-left: 10px;
+            transform: translateY(-2px);
+            width: 13px;
+            height: 13px;
+        }
+    }
+    &__body{
+        margin-top: auto;
+        font-size: 13px;
+        font-weight: 500;
+        color: #F7F1E5;
+    }
+    a.qbc-cont__body{
+        transition: 0.3s;
+        &:hover{
+            transition: 0.3s;
+            color: #fcce12;
+        }
+    }
+    &__icnwrap{
+        display: flex;
+        align-items: flex-end;
+        margin: 0 -4px;
+    }
+    &__icons{
+        margin: 0 4px;
+        width: 30px;
+        height: 30px;
+        transition: 0.3s;
+        svg{
+            width: 100%;
+            height: 100%;
+        }
+        &:hover{
+            transform: scale(1.1);
+            transition: 0.3s;
+        }
+        &--play{
+            width: 75px;
+            height: 25px;
+            img{
+                width: 100%;
+                height: 100%;
+            }
+        }
+        &--terms{
+            color: #F7F1E5;
+            padding: 0 8px;
+            width: auto;
+            height: auto;
+            &:last-child{
+                position: relative;
+                &::after{
+                    position: absolute;
+                    content: '';
+                    height: 100%;
+                    width: 1px;
+                    background-color: #F7F1E5;
+                    left: -5px;
+                    top: 0;
+                }
+            }
+            &:hover{
+                transform: none;
+                color: #fcce12;
+            }
+        }
+    }
+
+    &--red{
+        .qbc-cont__head{
+            color: #942136;
+        }
+        .qbc-cont__body{
+            color: #000;
+        }
+        .qbc-cont__icons{
+            svg{
+                path{
+                 fill: #000;
+                }
+            }
+        }
+    }
+}
