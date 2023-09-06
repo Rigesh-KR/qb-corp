@@ -1,0 +1,83 @@
+.qbc-timeline {
+    &__lines {
+        background-color: red;
+        border-left: 4px dashed $color-green;
+        border-bottom: 4px dashed $color-green;
+        border-width: 7px;
+        border-bottom-left-radius: 30px;
+        position: relative;
+        &::after {
+            content: "";
+            position: absolute;
+            left: -28px;
+            top: -2px;
+            width: 50px;
+            height: 50px;
+            background-image: url("data:image/svg+xml,%3Csvg width='61' height='61' viewBox='0 0 61 61' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg id='Group 1000004712'%3E%3Ccircle id='Ellipse 3932' cx='30.5' cy='30.5' r='30.5' fill='%23A20C33'/%3E%3Ccircle id='Ellipse 3933' cx='30.6535' cy='30.6535' r='20.6301' stroke='%23EEE4CC' stroke-width='2'/%3E%3C/g%3E%3C/svg%3E");
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        &--sec {
+            &::after {
+                top: 40%;
+            }
+        }
+
+        &--right {
+            border-right: 4px dashed $color-green;
+            border-left: 0;
+            border-width: 7px;
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 30px;
+            &::after {
+                left: 98%;
+                top: 40%;
+            }
+            .qbc-timeline__outer {
+                flex-direction: row-reverse;
+            }
+
+            .qbc-timeline__redtext {
+                text-align: right;
+            }
+        }
+    }
+    &__outer {
+        display: flex;
+        width: 80%;
+        margin: 0 auto;
+        padding: $spacer-4 0;
+    }
+
+    &__left {
+        width: calc(50% - 32px);
+        margin: 0 16px;
+    }
+
+    &__right {
+        width: calc(50% - 32px);
+        margin: 0 16px;
+    }
+
+    &__redtext {
+        color: $color-red;
+        font-size: 95px;
+        font-weight: 300;
+    }
+
+    &__heading {
+        color: $color-black-1;
+        font-size: 30px;
+        font-weight: 500;
+        padding-bottom: $spacer-3;
+    }
+
+    &__text {
+        color: $color-black-1;
+        font-size: 16px;
+        font-weight: 400;
+        padding-bottom: $spacer-3;
+    }
+}
