@@ -112,5 +112,10 @@
                 }
             }
         }
+        &__bgimg{
+            &.only-mobile-tablet{
+                display: none;
+            }
+        }
     }
 }
