@@ -24,6 +24,12 @@
     flex-direction: column;
     align-items: center;
     padding: $spacer-3;
+    &--cv0 {
+      border-color:$color-beef;
+      .qbc-prdct__tile-txt {
+        color: #d97a49;
+      }
+    }
     &--cv1 {
       border-color: #d97a49;
       .qbc-prdct__tile-txt {
@@ -125,7 +131,7 @@
       .qbc-heading__text {
         text-align: center;
         width: 100%;
-        margin: 0 auto;
+        margin: 0 auto $spacer-3;
       }
     }
 
