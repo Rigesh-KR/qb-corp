@@ -1,5 +1,32 @@
 .qbc-partners {
   display: flex;
+  &__slick{
+    overflow-y: hidden;
+    display: flex;
+    flex: 1;
+    margin: 0 !important;
+    padding-bottom: $spacer-6;
+    .slick-list, .slick-track{
+      width: 100% !important;
+      overflow: hidden;
+    }
+    .carousel-indicators{
+      width: auto;
+      right: 10px;
+      bottom: -40px;
+      margin: 0;
+      justify-content: end;
+    }
+    .carousel-btn{
+      width: 13px;
+      height: 13px;
+      border: 1px solid $color-red;
+      border-radius: 50%;
+      &.active{
+          background-color: $color-red;
+      }
+  }
+  }
   &__body {
     width: 40%;
     padding-left: $spacer-6;
@@ -9,6 +36,7 @@
     &-outr {
       display: flex;
       flex: 1;
+      width: 100% !important;
     }
     width: 50%;
     justify-content: end;
@@ -98,6 +126,9 @@
 @include mobile {
   .qbc-partners {
     flex-direction: column;
+    &__slick{
+      order: 1;
+    }
     &__body {
       width: 100%;
       padding-left: $spacer-0;
@@ -120,6 +151,10 @@
     &__tile {
       width: calc(50% - 16px) !important;
       min-height: 150px !important;
+
+      img{
+        width: 100%;
+      }
     }
   }
 }
