@@ -5,8 +5,8 @@
     }
     .qbc-heading__text {
       text-align: center;
-      width: 60%;
-      margin: 0 auto $spacer-6;
+      width: 80%;
+      margin: 0 auto $spacer-4;
     }
   }
 
@@ -14,6 +14,7 @@
     display: flex;
     flex-wrap: wrap;
     margin: 0 -8px;
+    padding-top: $spacer-4;
   }
   &__tile {
     width: calc(16.66% - 16px);
@@ -27,78 +28,116 @@
     &--cv0 {
       border-color:$color-beef;
       .qbc-prdct__tile-txt {
-        color: #d97a49;
+        color: $color-beef;
+      }
+      svg{
+        fill:$color-beef;
       }
     }
     &--cv1 {
-      border-color: #d97a49;
+      border-color: $color-lamb;
       .qbc-prdct__tile-txt {
-        color: #d97a49;
+        color: $color-lamb;
+      }
+      svg{
+        fill:$color-lamb;
       }
     }
     &--cv2 {
-      border-color: #4fa77c;
+      border-color: $color-FrozenMeat;
       .qbc-prdct__tile-txt {
-        color: #4fa77c;
+        color:$color-FrozenMeat;
+      }
+      svg{
+        stroke:$color-FrozenMeat; 
       }
     }
     &--cv3 {
-      border-color: #4ca2b2;
+      border-color:$color-Sausages;
       .qbc-prdct__tile-txt {
-        color: #4ca2b2;
+        color:$color-Sausages;
+      }
+      svg{
+        fill:$color-Sausages;
       }
     }
     &--cv4 {
-      border-color: #8c60c9;
+      border-color: $color-cheese;
       .qbc-prdct__tile-txt {
-        color: #8c60c9;
+        color: $color-cheese;
+      }
+      svg{
+        fill:$color-cheese;
       }
     }
     &--cv5 {
-      border-color: #db577b;
+      border-color:$color-SeaFood;
       .qbc-prdct__tile-txt {
-        color: #db577b;
+        color:$color-SeaFood;
+      }
+      svg{
+        fill:$color-SeaFood;
       }
     }
     &--cv6 {
-      border-color: #545deb;
+      border-color:$color-panty;
       .qbc-prdct__tile-txt {
-        color: #545deb;
+        color:$color-panty;
+      }
+      svg{
+        fill:$color-panty;
       }
     }
     &--cv7 {
-      border-color: #b0439a;
+      border-color:$color-PlantBased;
       .qbc-prdct__tile-txt {
-        color: #b0439a;
+        color:$color-PlantBased;
+      }
+      svg{
+        fill:$color-PlantBased;
       }
     }
     &--cv8 {
-      border-color: #728792;
+      border-color:$color-beverages;
       .qbc-prdct__tile-txt {
-        color: #728792;
+        color:$color-beverages;
+      }
+      svg{
+        fill:$color-beverages;
       }
     }
     &--cv9 {
-      border-color: #de706c;
+      border-color:$color-AssortedFrozen;
       .qbc-prdct__tile-txt {
-        color: #de706c;
+        color:$color-AssortedFrozen;
+      }
+      svg{
+        // fill:$color-AssortedFrozen;
+        stroke:$color-AssortedFrozen;
       }
     }
     &--cv10 {
-      border-color: #3d5993;
+      border-color:$color-Dessert;
       .qbc-prdct__tile-txt {
-        color: #3d5993;
+        color:$color-Dessert;
+      }
+      svg{
+        fill:$color-Dessert;
       }
     }
     &-img {
-      height: 100px;
-      margin: 0 0 $spacer-3 0;
+      // height: 100px;
+      margin: $spacer-2 0 $spacer-3 0;
       display: flex;
       justify-content: center;
-
+      align-items: center;
+      svg{
+        height: 75px;
+      }
       img {
-        // width: 100%;
-        height: 100%;
+        width: 100%;
+        // height: 100%;
+        align-items: center;
       }
     }
     &-txt {
