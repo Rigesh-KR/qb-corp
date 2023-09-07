@@ -4,6 +4,8 @@
     }
     &__wrap {
         display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
     &__sec-1 {
         width: 40%;
