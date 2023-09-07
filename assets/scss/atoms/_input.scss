@@ -1,0 +1,33 @@
+.qbc-input-wrap {
+  display: flex;
+  flex-direction: column;
+  // input start
+  input,
+  .qbc-input {
+    display: inline-block;
+    width: 100%;
+    font-size: 16px;
+    font-weight: 500;
+    color: #8d8d8d;
+
+    border: none;
+    outline: none;
+    padding: $spacer-2 $spacer-0;
+    background-color: transparent;
+    border-bottom: 1px solid #8d8d8d;
+
+    &::placeholder {
+      font-size: 14px;
+      font-weight: 500;
+      color: #8d8d8d;
+    }
+  }
+  // input end
+
+  label,
+  .qbc-label {
+    font-size: 16px;
+    font-weight: 500;
+    color: #000;
+  }
+}

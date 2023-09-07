@@ -20,5 +20,8 @@
     "/**/node_modules/**",
     "/.vscode/**"
   ],
-  "liveSassCompile.settings.showOutputWindowOn": "Error"
+  "liveSassCompile.settings.showOutputWindowOn": "Error",
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+  }
 }
