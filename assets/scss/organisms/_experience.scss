@@ -1,0 +1,52 @@
+.qbc-experience {
+    &__outer {
+        position: relative;
+    }
+    &__wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__sec-1 {
+        width: 40%;
+        min-height: 400px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        .qbc-heading {
+            color: #231f20;
+            font-weight: 500;
+        }
+    }
+    &__sec-2 {
+        position: absolute;
+        width: 50%;
+        height: auto;
+        top: 0;
+        right: 0;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+}
+
+
+@include mobile-tablet {
+   .qbc-experience {
+       &__wrap {
+            display: block;
+        }  
+        &__sec-1 {
+            width: 100%;
+            min-height: auto;
+            padding-bottom: $spacer-4;
+        }
+        &__sec-2 {
+            width: 100%;
+            position: inherit;
+        }
+   } 
+}

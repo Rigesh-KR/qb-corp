@@ -73,3 +73,28 @@ $(".qbc-mainbanner-slick").slick({
 //     },
 //   ],
 // });
+
+// // onload accordion collapse
+const accordionButton = document.querySelectorAll(
+  ".qbc-product-list .accordion-button"
+);
+const accordionCnt = document.querySelectorAll(
+  ".qbc-product-list .accordion-collapse"
+);
+window.addEventListener("load", () => {
+  if (window.innerWidth < 767) {
+    accordionButton.forEach((e) => {
+      e.classList.add("collapsed");
+    });
+    accordionCnt.forEach((e) => {
+      e.classList.remove("show");
+    });
+  } else {
+    accordionButton.forEach((e) => {
+      e.classList.remove("collapsed");
+    });
+    accordionCnt.forEach((e) => {
+      e.classList.add("show");
+    });
+  }
+});

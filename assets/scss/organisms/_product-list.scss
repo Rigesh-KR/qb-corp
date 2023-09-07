@@ -1,0 +1,111 @@
+.qbc-product-list{
+    width: 80%;
+    &__outer{
+        display: flex;
+        justify-content: flex-start;
+        margin: 0 -8px;
+        .accordion-item{
+            width: calc(50% - 16px);
+            margin: 0 8px;
+            border: 0;
+        }
+        .accordion-header{
+            .qbc-heading{
+                font-size: 20px;
+                margin-bottom: 0;
+                color: $color-drygoods;
+                font-weight: 600;
+                img{
+                    width: 18px;
+                }
+            }
+            .accordion-button{
+                background-color: transparent;
+                box-shadow: none;
+                padding: 0;
+                padding-bottom: 16px;
+                border-bottom: 2px solid $color-drygoods;
+                pointer-events: none;
+                &::after{
+                    display: none;
+                    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='8' viewBox='0 0 14 8' fill='none'%3E%3Cpath d='M0.999116 1.00001L1.00001 0.999115L1.00042 0.999531L6.64642 6.64653L7.00001 7.00018L7.35359 6.64653L12.9996 0.999562L12.9996 0.999531L12.9998 0.999425L13 0.999377L13.0003 0.999425L13.0005 0.999562L13.0006 0.999767L13.0006 1.00001L13.0006 1.00025L13.0005 1.00046L7.00045 7.00045L7.00001 7.0009L6.99956 7.00046L0.999563 1.00046L0.999116 1.00001Z' fill='white' stroke='%238C60C9'/%3E%3C/svg%3E");
+                    background-size: 90%;
+                    background-position: center;
+                }
+            }
+        }
+        .accordion-body{
+            padding: 16px 0;
+        }
+    }
+    &__itemout{
+        &--country{
+            .qbc-product-list__items{
+                font-weight: 400;
+            }
+        }
+    }
+    &__items{
+        margin-top: 8px;
+        font-size: 17px;
+        font-weight: 700;
+        color: $color-black2;
+        padding-bottom: 8px;
+        border-bottom: 1px solid $color-black2;
+        &:last-child{
+            border: 0;
+        }
+    }
+    &--partners{
+        width: 100%;
+        .qbc-product-list__outer{
+            .accordion-item{
+                width: calc(100% - 16px);
+                margin: 0 8px;
+                border: 0;
+            }
+            .accordion-header{
+                .qbc-heading{
+                    color: $color-black2;
+                }
+            }
+            .accordion-button{
+                border-bottom: 2px solid $color-black2;
+                &::after{
+                    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16' fill='none'%3E%3Cpath d='M1.9991 5.00001L1.99999 4.99911L2.00041 4.99953L7.64641 10.6465L7.99999 11.0002L8.35358 10.6465L13.9995 4.99956L13.9996 4.99953L13.9998 4.99942L14 4.99938L14.0002 4.99942L14.0004 4.99956L14.0006 4.99977L14.0006 5.00001L14.0006 5.00025L14.0004 5.00046L8.00044 11.0005L7.99999 11.0009L7.99955 11.0005L1.99955 5.00046L1.9991 5.00001Z' fill='white' stroke='%23494345'/%3E%3C/svg%3E");
+                    background-size: 100%;
+                }
+            }
+        }
+    }
+}
+
+@include tablet{
+    .qbc-product-list{
+        width: 100%;
+    }
+}
+
+@include mobile{
+    .qbc-product-list{
+        width: 100%;
+        &__outer{
+            flex-direction: column;
+            .accordion-item{
+                width: calc(100% - 16px);
+                margin-bottom: 16px;
+            }
+            .accordion-header{
+                .qbc-heading{
+                    font-size: 18px;
+                }
+                .accordion-button{
+                    pointer-events: all;
+                    &::after{
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+}
