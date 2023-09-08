@@ -1,0 +1,53 @@
+.qbc-contact {
+  &__form {
+    width: 100%;
+    padding: $spacer-3;
+    &-row {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      margin: 0 -8px 32px -8px;
+    }
+    .qbc-input-wrap {
+      width: calc(50% - 16px);
+      margin: 0 8px;
+      &.full {
+        width: 100%;
+      }
+    }
+    .qbc-radio-wrap {
+      width: auto;
+      display: inline-flex;
+      margin: 8px;
+    }
+    &-title {
+      font-size: 16px;
+      font-weight: 600;
+      color: #000;
+      margin-bottom: 16px;
+    }
+    &-btn-wrap {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+    }
+  }
+}
+
+@include mobile {
+  .qbc-contact {
+    &__form {
+      padding: 16px 0;
+      &-row {
+        flex-wrap: wrap;
+        margin: 0;
+      }
+      .qbc-input-wrap,
+      .qbc-radio-wrap {
+        width: 100%;
+        margin: 0;
+        margin-bottom: 16px;
+      }
+    }
+  }
+}

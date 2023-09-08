@@ -1,0 +1,64 @@
+.qbc-radio-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  // radio start
+  input[type="radio"],
+  .qbc-radio {
+    display: inline-block;
+    appearance: none;
+    position: relative;
+    width: 17px;
+    height: 17px;
+    overflow: hidden;
+    cursor: pointer;
+    user-select: none;
+    box-shadow: inset 0px 0px 0px 1.5px #e0e0e0;
+    background-color: #e0e0e0;
+    transition: background-color 0.3s ease-in-out;
+    border-radius: 50%;
+    &::after {
+      content: "\2713";
+      display: inline-block;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 0.6em;
+      font-weight: 600;
+      visibility: hidden;
+      opacity: 0;
+      color: rgb(255, 255, 255);
+      transition: opacity 0.3s ease-in-out;
+    }
+    &:checked {
+      background-color: hsl(0, 0%, 0%);
+      box-shadow: inset 0px 0px 0px 1.5px #000000;
+      &::after {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+    &:disabled {
+      cursor: auto;
+      box-shadow: inset 0px 0px 0px 1.5px rgb(209, 209, 209);
+      &:checked {
+        background-color: rgb(209, 209, 209);
+        &::after {
+          visibility: visible;
+          opacity: 1;
+        }
+      }
+    }
+  }
+  // radio end
+
+  label,
+  .qbc-label {
+    font-size: 13px;
+    font-weight: 400;
+    color: #000;
+    margin-left: $spacer-2;
+  }
+}

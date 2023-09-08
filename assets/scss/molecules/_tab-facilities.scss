@@ -20,7 +20,13 @@
     }
   }
 }
-
+@include tablet{
+  .qbc-facilities {
+    &__body {
+      width:45%;
+    }
+  }
+}
 @include mobile {
   .qbc-facilities {
     flex-direction: column;

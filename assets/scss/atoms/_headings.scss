@@ -15,12 +15,23 @@
   }
 }
 
+@include tablet {
+  .qbc-heading {
+    &__main {
+      margin-bottom: $spacer-3;
+    }
+    font-size: $spacer-4;
+    img{
+      width: 20px;
+    }
+  }
+}
+
 @include mobile {
   .qbc-heading {
     &__main {
       margin-bottom: $spacer-3;
     }
-
     font-size: $spacer-4;
 
     img {
