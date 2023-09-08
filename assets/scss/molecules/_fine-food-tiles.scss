@@ -1,4 +1,10 @@
 .fine-food-tile {
+  display: flex;
+  flex-wrap: wrap;
+  &_item {
+    width: calc(16.66% - 16px);
+    margin: 24px 8px;
+  }
   &__outer {
     border-radius: 14px;
     border: 2px solid rgba(195, 39, 27, 0.3490196078);
@@ -36,6 +42,14 @@
     padding-top: 15px;
     img {
       width: 100%;
+    }
+  }
+}
+@include mobile {
+  .fine-food-tile {
+    &_item {
+      width: calc(50% - 16px);
+      margin: 24px 8px;
     }
   }
 }
