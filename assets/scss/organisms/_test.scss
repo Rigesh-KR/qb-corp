@@ -1,0 +1,92 @@
+.an-timeline {
+  .timeline__lines {
+    border: 1px $color-green;
+    border-width: 7px;
+    border-radius: 20px;
+    position: relative;
+    background-color: #fff;
+    border-style: none none dashed dashed;
+    border-top-left-radius: 0;
+    border-bottom-right-radius: 0;
+    &::after {
+      content: "";
+      position: absolute;
+      top: -7px;
+      left: -7px;
+      width: 26%;
+      height: 50%;
+      background-color: #ffffff;
+      border: 7px $color-green;
+      border-style: dashed none none dashed;
+      border-top-left-radius: 20px;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      top: -8px;
+      left: -8px;
+      width: 20px;
+      height: 20px;
+      background-color: #fff;
+    }
+    // to add the circle to the div
+    .side {
+      position: absolute;
+      left: -28px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 50px;
+      height: 50px;
+      background-image: url("data:image/svg+xml,%3Csvg width='61' height='61' viewBox='0 0 61 61' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg id='Group 1000004712'%3E%3Ccircle id='Ellipse 3932' cx='30.5' cy='30.5' r='30.5' fill='%23A20C33'/%3E%3Ccircle id='Ellipse 3933' cx='30.6535' cy='30.6535' r='20.6301' stroke='%23EEE4CC' stroke-width='2'/%3E%3C/g%3E%3C/svg%3E");
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      z-index: 2;
+    }
+    // to disable the border bottom from last child ( add if needed )
+    &.last-child {
+      border-bottom: none;
+      border-bottom-left-radius: 0;
+    }
+    &--mod {
+      border-style: none dashed dashed none;
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+      border-bottom-right-radius: 20px;
+      border-bottom-left-radius: 0;
+      &::after {
+        top: -7px;
+        right: -7px;
+        bottom: unset;
+        left: unset;
+        border-top-right-radius: 20px;
+        border-top-left-radius: 0;
+        border-style: dashed dashed none none;
+      }
+      &::before {
+        left: unset;
+        right: -8px;
+      }
+      &.last-child {
+        border-bottom: none;
+        border-bottom-right-radius: 0;
+      }
+      .side {
+        left: unset;
+        right: -28px;
+      }
+    }
+    &:first-child {
+      &::after {
+        border-top-left-radius: 0;
+      }
+      .side {
+        top: -8px;
+      }
+    }
+    .qbc-timeline__outer {
+      position: relative;
+      z-index: 1;
+    }
+  }
+}
