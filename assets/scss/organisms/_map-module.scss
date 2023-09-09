@@ -19,7 +19,7 @@
     &__main{
         padding: 0;
     }
-    &--cb{     
+    &--ChilledBeef{     
         .qbc-mapView__tile-body{
             color: $color-beef;
         }   
@@ -27,7 +27,7 @@
             fill: $color-beef;
         } 
     }
-    &--cl{     
+    &--ChilledLamb{     
         .qbc-mapView__tile-body{
             color:$color-lamb;
         }   
@@ -42,7 +42,7 @@
             }
         }
     }
-    &--fm{     
+    &--FrozenMeat{     
         .qbc-mapView__in{
             min-height:700px;
         }
@@ -63,7 +63,15 @@
         //     }
         // }
     }
-    &--cd{     
+    &--SausagesBacon{   
+        .qbc-mapView__tile-body{
+            color:$color-Sausages
+        }   
+        svg{
+            fill: $color-Sausages;
+        } 
+    }
+    &--CheeseDairy{     
         .qbc-mapView__in{
             min-height:670px;
         }
@@ -74,7 +82,7 @@
             fill: $color-cheese;
         } 
     }
-    &--sf{     
+    &--Seafood{     
         // .qbc-mapView__in{
         //     min-height:670px;
         // }
@@ -83,6 +91,63 @@
         }   
         svg{
             fill: $color-SeaFood;
+        } 
+    }
+    &--PantyEssentials{     
+        .qbc-mapView__in{
+            min-height:700px;
+        }
+        .qbc-mapView__tile-body{
+            color:$color-panty;
+        }   
+        svg{
+            fill: $color-panty;
+        } 
+        .qbc-mapView__tile--products{
+            transform: translate(50%, 20PX);
+        }
+    }
+    &--Beverages{     
+        .qbc-mapView__tile-body{
+            color:$color-beverages;
+        }   
+        svg{
+            fill: $color-beverages;
+        } 
+    }
+    &--plantBased{     
+        .qbc-mapView__tile-body{
+            color:$color-PlantBased;
+        }   
+        svg{
+            fill: $color-PlantBased;
+        } 
+    }
+    &--Beverages{     
+        .qbc-mapView__tile-body{
+            color:$color-beverages;
+        }   
+        svg{
+            fill: $color-beverages;
+        } 
+    }
+    &--AssortedFrozen{     
+        // .qbc-mapView__in{
+        //     min-height:670px;
+        // }
+        .qbc-mapView__tile-body{
+            color:$color-AssortedFrozen;
+        }   
+        svg{
+            fill: $color-AssortedFrozen;
+        } 
+    }
+    &--Dessert{     
+        .qbc-mapView__tile-body{
+            color:$color-Dessert;
+        }   
+        svg{
+            fill: $color-Dessert;
         } 
     }
     &__in{
@@ -189,7 +254,7 @@
                 max-width: 135px;
             }
         }
-        &--cl{     
+        &--ChilledLamb{     
             .qbc-mapView__prdctimg{
                 left: 110px;
                 top: 240px;
@@ -198,12 +263,17 @@
                 }
             }
         }
-        &--fm{  
+        &--FrozenMeat{  
             .qbc-mapView__in{
                 min-height: 430px;
             }
         }
-        &--cd{     
+        &--CheeseDairy{     
+            .qbc-mapView__in{
+                min-height:430px;
+            }
+        }
+        &--PantyEssentials{     
             .qbc-mapView__in{
                 min-height:430px;
             }
@@ -221,7 +291,7 @@
         }
         &__tile{
             position: unset;
-            transform: translate(0, 0px);
+            transform: translate(0, 0px) !important;
             border: 1px solid $color-almond;
             padding: $spacer-3;
             width: calc(33.33% - 18px);
@@ -252,7 +322,7 @@
                 max-width: 135px;
             }
         }
-        &--cb{  
+        &--ChilledBeef{  
             .qbc-mapView__prdctimg  {
                 top: 220px;
                 left: 15px;
@@ -261,7 +331,7 @@
                 }
             }   
         }
-        &--cl{  
+        &--ChilledLamb{  
             .qbc-mapView__prdctimg  {
                 top: 220px;
                 left: 45px;
@@ -270,7 +340,7 @@
                 }
             }   
         }
-        &--fm{  
+        &--FrozenMeat{  
             .qbc-mapView__in{
                 min-height: auto;
             }
@@ -285,7 +355,7 @@
                 }
             }  
         }
-        &--cd{     
+        &--CheeseDairy{     
             .qbc-mapView__in{
                 min-height: auto;
             }
@@ -297,12 +367,36 @@
                 }
             } 
         }
-        &--sf{     
+        &--PantyEssentials{     
+            .qbc-mapView__in{
+                min-height: auto;
+            }
+            .qbc-mapView__map{
+                min-height: 210px;  
+            }
             .qbc-mapView__prdctimg  {
                 top: 210px;
                 left: 15px;
                 img{
                     max-width: 70px;
+                }
+            } 
+        }
+        &--plantBased{     
+            .qbc-mapView__prdctimg  {
+                top: 220px;
+                left: 15px;
+                img{
+                    max-width: 80px;
+                }
+            } 
+        }
+        &--AssortedFrozen{     
+            .qbc-mapView__prdctimg  {
+                top: 210px;
+                left: 15px;
+                img{
+                    max-width: 60px;
                 }
             } 
         }
