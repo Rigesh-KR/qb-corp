@@ -1,17 +1,23 @@
 .qbc-mapView{
     position: relative;
-    min-height:535px;
     &__map{
-        background-position: right 50px;
+        background-position: left 0;
         background-repeat: no-repeat;
-        background-size: 95%;
+        background-size:100%;
         position: absolute;
+        top: 0;
         width: 100%;
         height: 100%;
         z-index: 1;
     }
+    &__map-label{
+        display: none;
+        &.active{
+            display: block;
+        }
+    }
     &__main{
-        padding: 0 0 10%;
+        padding: 0;
     }
     &--cb{     
         .qbc-mapView__tile-body{
@@ -20,6 +26,47 @@
         svg{
             fill: $color-beef;
         } 
+    }
+    &--cl{     
+        .qbc-mapView__tile-body{
+            color:$color-lamb;
+        }   
+        svg{
+            fill: $color-lamb;
+        } 
+        .qbc-mapView__prdctimg{
+            left: 120px;
+            top: 380px;
+            img{
+                max-width: 90px;
+            }
+        }
+    }
+    &--fm{     
+        .qbc-mapView__in{
+            min-height:700px;
+        }
+        .qbc-mapView__tile-body{
+            color:$color-FrozenMeat;
+        }   
+        svg{
+            fill: $color-FrozenMeat;
+        } 
+        .qbc-mapView__tile--products{
+            transform: translate(50%, 0);
+        }
+        // .qbc-mapView__tile--prdctimg{
+        //     left: 120px;
+        //     top: 380px;
+        //     img{
+        //         max-width: 90px;
+        //     }
+        // }
+    }
+    &__in{
+        position: relative;
+        min-height:635px;
+        margin-bottom: $spacer-6;
     }
     &__tile{
         display: flex;
@@ -34,17 +81,19 @@
             font-weight: $font-medium;
         }
         &--countries{
-            left: 30px;
-            top: 0;
+            left: 60px;
+            top: 55px;
             .qbc-mapView__tile-head{
-                font-size: 90px;
-                line-height: 80px;
+                font-size: 110px;
+                line-height: 100px;
             }
         }
         &--products{
             left:50%;
-            bottom: 0;
-            transform: translate(-35%, 70px);
+            // top: 75%;
+            // transform: translate(-35%, 70px);
+            transform: translate(-25%, 0);
+            top: 565px;
             .qbc-mapView__tile-head{
                 font-size: 50px;
                 line-height: 50px;
@@ -52,18 +101,13 @@
         }
         &--partners{
             right: 22%;
-            bottom: 15%;
-            transform: translate(-50%, 30px);
+            top: 435px;
+            transform: translate(-50%, 0);
+            // top: 75%;
+            // transform: translate(-50%, 30px);
             .qbc-mapView__tile-head{
                 font-size: 75px;
                 line-height:65px;
-            }
-        }
-        &--prdctimg{
-            left: 65px;
-            bottom: 0;
-            img{
-                max-width:250px;
             }
         }
         &-body{
@@ -75,35 +119,144 @@
             }
         }
     }
+    &__prdctimg{
+        position: absolute;
+        left:70px;
+        // bottom: 0;
+        top: 430px;
+        img{
+            max-width:250px;
+        }
+    }
 
+}
+.qbc-prdct-hide{
+    display: none;
 }
 @include tablet{
     .qbc-mapView{
-        min-height: 365px;
-        &__map{
-            background-position: right 70px;
+        &__in{
+            min-height:430px;
         }
+        // &__map{
+        //     background-position: right 70px;
+        // }
         &__tile{
+            &--countries{
+                left: 35px;
+                top: 0px;
+                .qbc-mapView__tile-head{
+                    font-size:85px;
+                    line-height: 80px;
+                }
+            }
             &--products{
-                transform: translate(-50%, 70px);
+                // transform: translate(-50%, 70px);
+                top:360px;
             }
             &--partners{
-                right: 19%;
-                bottom: 10%;
+                top: 280px;
+                transform: translate(0, 0);
+                // right: 19%;
+                // bottom: 10%;
             }
-            &--prdctimg img {
+        }
+        &__prdctimg  {
+            top: 280px;
+            img{
                 max-width: 135px;
+            }
+        }
+        &--cl{     
+            .qbc-mapView__prdctimg{
+                left: 110px;
+                top: 240px;
+                img{
+                    max-width: 60px;
+                }
+            }
+        }
+        &--fm{  
+            .qbc-mapView__in{
+                min-height: 430px;
             }
         }
     }
 }
 @include mobile{
     .qbc-mapView{
-        background-position: right 70px;
-        min-height: 365px;
+        display: flex;
+        flex-direction: column;
+        &__in{
+            min-height:auto;
+            display: flex;
+            margin: 0 -8px $spacer-3;
+        }
         &__tile{
             position: unset;
             transform: translate(0, 0px);
+            border: 1px solid $color-almond;
+            padding: $spacer-3;
+            width: calc(33.33% - 18px);
+            margin: 0 8px;
+            text-align: center;
+            border-radius: 10px;
+            &--prdctimg{
+                // display: none;
+            }
+            &-head{
+                font-size: 20px !important;
+                line-height: normal !important;
+            }
+        }
+        &__map{
+            position: unset;
+            min-height:175px;
+            margin-bottom: $spacer-4;
+            // background-position: -14px 0;
+            img{
+                width: 100%;
+                margin-bottom: $spacer-4;
+            }
+        }
+        &__prdctimg  {
+            top: 280px;
+            img{
+                max-width: 135px;
+            }
+        }
+        &--cb{  
+            .qbc-mapView__prdctimg  {
+                top: 220px;
+                left: 15px;
+                img{
+                    max-width: 80px;
+                }
+            }   
+        }
+        &--cl{  
+            .qbc-mapView__prdctimg  {
+                top: 220px;
+                left: 45px;
+                img{
+                    max-width:25px;
+                }
+            }   
+        }
+        &--fm{  
+            .qbc-mapView__in{
+                min-height: auto;
+            }
+            .qbc-mapView__map{
+                min-height: 210px;  
+            }
+            .qbc-mapView__prdctimg  {
+                top: 220px;
+                left: 15px;
+                img{
+                    max-width: 80px;
+                }
+            }  
         }
     }
 }
