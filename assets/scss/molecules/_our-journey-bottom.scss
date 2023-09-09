@@ -1,0 +1,40 @@
+.qbc-journey-bottom {
+  position: relative;
+  top: 0;
+  left: 0;
+  &__banner {
+    img {
+      position: relative;
+      width: 100%;
+    }
+  }
+  &__logo {
+    img {
+      position: absolute;
+      top: 16px;
+      right: 22px;
+    }
+  }
+}
+@include mobile {
+  .qbc-journey-bottom {
+    &__logo {
+      img {
+        top: 8px;
+        right: 8px;
+        width: 124px;
+      }
+    }
+  }
+}
+@media (max-width: 320px) {
+  .qbc-journey-bottom {
+    &__logo {
+      img {
+        top: 10px;
+        right: 6px;
+        width: 100px;
+      }
+    }
+  }
+}
