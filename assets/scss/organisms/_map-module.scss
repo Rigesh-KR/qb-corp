@@ -63,6 +63,28 @@
         //     }
         // }
     }
+    &--cd{     
+        .qbc-mapView__in{
+            min-height:670px;
+        }
+        .qbc-mapView__tile-body{
+            color:$color-cheese;
+        }   
+        svg{
+            fill: $color-cheese;
+        } 
+    }
+    &--sf{     
+        // .qbc-mapView__in{
+        //     min-height:670px;
+        // }
+        .qbc-mapView__tile-body{
+            color:$color-SeaFood;
+        }   
+        svg{
+            fill: $color-SeaFood;
+        } 
+    }
     &__in{
         position: relative;
         min-height:635px;
@@ -181,6 +203,11 @@
                 min-height: 430px;
             }
         }
+        &--cd{     
+            .qbc-mapView__in{
+                min-height:430px;
+            }
+        }
     }
 }
 @include mobile{
@@ -257,6 +284,27 @@
                     max-width: 80px;
                 }
             }  
+        }
+        &--cd{     
+            .qbc-mapView__in{
+                min-height: auto;
+            }
+            .qbc-mapView__prdctimg  {
+                top: 220px;
+                left: 15px;
+                img{
+                    max-width: 80px;
+                }
+            } 
+        }
+        &--sf{     
+            .qbc-mapView__prdctimg  {
+                top: 210px;
+                left: 15px;
+                img{
+                    max-width: 70px;
+                }
+            } 
         }
     }
 }
