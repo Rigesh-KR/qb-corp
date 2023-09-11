@@ -66,6 +66,22 @@
       }
     }
   }
+  &__list{
+    margin: 0;
+    padding: 0 0 0 $spacer-3;
+  }
+  &__item{
+    margin-bottom: $spacer-4;
+    padding-left: $spacer-3;
+    position: relative;
+    &::before{
+      content: "\2022"; 
+      color:$color-black-1;
+      font-weight: bold; 
+      position: absolute;
+      left: 0;
+    }
+  }
 }
 @include tablet{
   .qbc-facilities {
