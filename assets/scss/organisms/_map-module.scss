@@ -93,15 +93,15 @@
             fill: $color-SeaFood;
         } 
     }
-    &--PantyEssentials{     
+    &--PantryEssentials{     
         .qbc-mapView__in{
             min-height:700px;
         }
         .qbc-mapView__tile-body{
-            color:$color-panty;
+            color:$color-pantry;
         }   
         svg{
-            fill: $color-panty;
+            fill: $color-pantry;
         } 
         .qbc-mapView__tile--products{
             transform: translate(50%, 20PX);
@@ -273,7 +273,7 @@
                 min-height:430px;
             }
         }
-        &--PantyEssentials{     
+        &--PantryEssentials{     
             .qbc-mapView__in{
                 min-height:430px;
             }
@@ -367,7 +367,7 @@
                 }
             } 
         }
-        &--PantyEssentials{     
+        &--PantryEssentials{     
             .qbc-mapView__in{
                 min-height: auto;
             }
