@@ -3,18 +3,20 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        margin: 0 -8px;
     }
     &__sec-1 {
-        width: 40%;
+        width: calc(30% - 16px);
+        margin: 0 8px;
         height: auto;
-        padding: $spacer-4 $spacer-1;
+        // padding: $spacer-4 $spacer-1;
         border-radius: 10px;
         border: 1px solid rgba(140, 96, 201, 0.30);
         &-img {
             display: flex;
             align-items: center;
             justify-content: center;
-            min-height: 180px;
+            min-height: 150px;
             img {
                 width: 100%;
                 height: auto;
@@ -22,19 +24,21 @@
         }
     }
     &__sec-2 {
-        width: 60%;
-        margin-left: $spacer-6;
+        width: calc(70% - 16px);
+        margin: 0 8px;
+        // margin-left: $spacer-6;
         .qbc-heading {
             color: $color-violet;
             font-size: 20px;
             font-weight: 600;
-            padding-bottom: $spacer-3;
+            padding-bottom: $spacer-2;
             margin-bottom: $spacer-3;
             display: flex;
             justify-content: flex-end;
             border-bottom: 3px solid $color-violet;
             img {
-                margin-left: $spacer-3;
+                margin-left: 8px;
+                width: 20px;
             }
         }
         .qbc-heading__text {

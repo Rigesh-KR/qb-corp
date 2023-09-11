@@ -56,6 +56,14 @@
             border: 0;
         }
     }
+    &__tileouter{
+        display: flex;
+        margin: 0 -16px;
+        .qbc-part-tile{
+            width: calc(50% - 32px);
+            margin: 0 16px 32px;
+        }
+    }
     &--partners{
         width: 100%;
         .qbc-product-list__outer{
@@ -83,6 +91,13 @@
 @include tablet{
     .qbc-product-list{
         width: 100%;
+        &__tileouter{
+            flex-direction: column;
+            .qbc-part-tile{
+                width: calc(100% - 32px);
+                margin: 0 16px 32px;
+            }
+        }
     }
 }
 
@@ -104,6 +119,22 @@
                     &::after{
                         display: block;
                     }
+                }
+            }
+        }
+        &__tileouter{
+            flex-direction: column;
+            .qbc-part-tile{
+                width: calc(100% - 32px);
+                margin: 0 16px 32px;
+                .qbc-part-tile__outer{
+                    flex-direction: column;
+                }
+                .qbc-part-tile__sec-1,.qbc-part-tile__sec-2{
+                    width: calc(100% - 16px);
+                }
+                .qbc-part-tile__sec-1{
+                    margin-bottom: 16px;
                 }
             }
         }
