@@ -1,0 +1,67 @@
+.qbc-nested {
+    &__dropdown-head {
+        font-size: 20px;
+        font-weight: 500;
+        display: block;
+        padding: $spacer-3 $spacer-0;
+        color: #3F3F3F;
+        text-align: inherit;
+        text-decoration: none;
+        white-space: nowrap;
+        background-color: transparent;
+        border-bottom: 1px solid #a20c33;
+        margin: $spacer-0 $spacer-3;
+    }
+    .dropdown-item {
+        font-weight: 500;
+        padding: $spacer-2 $spacer-3;
+        position: relative;
+        width: auto;
+        margin-left: $spacer-3;
+        &::after {
+            position: absolute;
+            content: '';
+            width: 0; 
+            height: 0; 
+            top: 13px;
+            left: 0;
+            border-top: 8px solid transparent;
+            border-bottom: 8px solid transparent;
+            border-left: 8px solid #A20C33;
+        }
+
+    }
+    .dropdown-menu li {
+        position: static;
+    }
+    .dropdown-menu {
+        border-radius: 0;
+        border: 1px solid #F0E4C9;
+        background: #F0E4C9;
+        display: block;
+    } 
+    .dropdown-submenu {
+        display: none;
+        position: absolute;
+        left: 100%;
+        top: 0;
+    }
+    .dropdown-menu .dropdown-submenu-left {
+        right: 100%;
+        left: auto;
+    }
+    .dropdown-menu > li:hover > .dropdown-submenu {
+        display: block;
+    }
+}
+
+@include mobile {
+    .qbc-nested {
+        .dropdown-menu {
+            width: 100%;
+        }
+        .dropdown-submenu {
+            position: static;
+        }
+    }
+}
