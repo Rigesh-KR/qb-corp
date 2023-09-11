@@ -1,0 +1,294 @@
+.qbc-status-sec{
+    margin-top: 400px;
+    background-color: rgba(240, 228, 201, .2);
+    padding: 40px 0;
+    &__outer{
+        display: flex;
+        margin: 0 -8px;
+    }
+    &__item{
+        min-height: 190px;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        width: calc(20% - 16px);
+        margin: 0 8px;
+        border: 1px solid $color-red;
+        border-radius: 15px;
+        padding: 16px;
+        position: relative;
+        
+        &:hover{
+            .qbc-status-sec__popover{
+                display: block;
+                transition: 0.5s;
+            }
+        }
+        &--logo{
+            border: 0;
+            .qbc-status-sec__subtitle{
+                margin: 0 auto;
+                width: 70%;
+                font-size: 18px;
+                font-weight: 600;
+                span{
+                    color: #A20C33;
+                }
+            }
+        }
+        div,h2{
+            &:last-child{
+                margin-top: auto;
+            }
+        }
+        .qbc-heading{
+            color: $color-black;
+            font-size: 25px;
+            width: 95%;
+            margin-bottom: 0;
+            img{
+                width: 18px;
+                margin-left: 4px;
+            }
+        }
+        &--rev{
+            div,h2{
+                &:last-child{
+                    margin-left: auto;
+                }
+            }
+        }
+        &--company{
+            border: 0;
+            width: calc(35% - 16px);
+            justify-content: center;
+            div{
+                margin-top: 24px !important;
+            }
+        }
+    }
+    &__itemimg{
+        width: 50px;
+        height: 50px;
+        svg{
+            width: 100%;
+            height: 100%;
+        }
+    }
+    &__title{
+        color: #A20C33;
+        font-size: 64px;
+        font-weight: 500;
+        margin-bottom: 8px;
+        text-align: center;
+        line-height: 1;
+    }
+    &__subtitle{
+        color: #231F20;
+        font-size: 16px;
+        font-weight: 600;
+        margin-bottom: 8px;
+        text-align: center;
+    }
+    &__para{
+        color: #231F20;
+        font-size: 16px;
+        font-weight: 400;
+        text-align: center;
+    }
+    &__img{
+        margin: 0 auto;
+        width: 170px;
+        height: auto;
+        img{
+            width: 100%;
+        }
+    }
+    &__popover{
+        position: absolute;
+        z-index: 2;
+        width: 100%;
+        min-width: 600px;
+        // height: 200px;
+        background-color: $color-green2;
+        border-radius: 40px;
+        top: -275px;
+        left: 0;
+        display: none;
+        transition: 0.5s;
+        &::after{
+            position: absolute;
+            content: '';
+            width: 30%;
+            height: 60px;
+            bottom: -40px;
+            left: 10%;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='245' height='83' viewBox='0 0 245 83' fill='none'%3E%3Cpath d='M120.586 81.8081C121.367 82.3369 122.385 82.3479 123.17 81.8361L244.026 2.97649L0.276029 0.333514L120.586 81.8081Z' fill='%2333663E'/%3E%3C/svg%3E");
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        &--two{
+            left: -200px;
+            &::after{
+                left: 40%;
+            }
+        }
+    }
+    &__popouter{
+        display: flex;
+        align-items: center;
+        padding: 24px;
+        width: 100%;
+        height: 100%;
+        margin: 0 -8px;
+    }
+    &__popleft{
+        width: calc(60% - 16px);
+        margin: 0 8px;
+        color: $color-white;
+        h4{
+            margin-bottom: 16px;
+            font-size: 20px;
+        }
+        span{
+            color: $color-yellow;
+        }
+    }
+    &__popright{
+        width: calc(40% - 16px);
+        margin: 0 8px;
+        &:last-child{
+            margin-top: 0 !important;
+        }
+        img{
+            width: 100%;
+        }
+    }
+}
+
+@include tablet{
+    .qbc-status-sec{
+        &__outer{
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        &__item{
+            width: calc(33.3% - 16px);
+            margin: 0 8px 24px;
+            &--logo,&--company{
+                justify-content: center ;
+                width: calc(50% - 16px);
+            }
+        }
+        &__title{
+            font-size: 50px;
+        }
+        &__img{
+            margin: 0 auto;
+            width: 140px;
+            height: auto;
+            img{
+                width: 100%;
+            }
+        }
+        &__popover{
+            pointer-events: none;
+            min-width: 500px;
+            top: -260px;
+            &::after{
+                bottom: -35px;
+                left: 20%;
+            }
+            &--two{
+                left: -108%;
+                &::after{
+                    left: 50%;
+                }
+            }
+        }
+        &__popouter{
+            // flex-direction: column;
+            margin: 0;
+        }
+        &__popleft{
+            width: calc(100% - 16px);
+        }
+        &__popright{
+            width: calc(50% - 16px);
+            margin: 0 8px;
+            &:last-child{
+                margin-top: 24px !important;
+            }
+            img{
+                width: 100%;
+            }
+        }
+    }
+}
+
+@include mobile{
+    .qbc-status-sec{
+        &__outer{
+            flex-direction: column;
+        }
+        &__item{
+            width: calc(100% - 16px);
+            margin: 0 8px 24px;
+            &--logo{
+            min-height: 120px;
+            margin-bottom: 0;
+            }
+            &--company{
+                text-align: center;
+                .qbc-heading{
+                    text-align: center;
+                }
+            }
+        }
+        &__title{
+            font-size: 50px;
+        }
+        &__img{
+            margin: 0 auto;
+            width: 140px;
+            height: auto;
+            img{
+                width: 100%;
+            }
+        }
+        &__popover{
+            pointer-events: none;
+            min-width: unset;
+            // height: 200px;
+            top: -400px;
+            &::after{
+                bottom: -35px;
+                left: 50%;
+            }
+            &--two{
+                left: 0;
+                &::after{
+                    left: 50%;
+                }
+            }
+        }
+        &__popouter{
+            flex-direction: column;
+            margin: 0;
+        }
+        &__popleft{
+            width: calc(100% - 16px);
+        }
+        &__popright{
+            width: calc(50% - 16px);
+            margin: 0 8px;
+            &:last-child{
+                margin-top: 24px !important;
+            }
+            img{
+                width: 100%;
+            }
+        }
+    }
+}

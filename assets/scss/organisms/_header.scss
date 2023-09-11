@@ -1,5 +1,83 @@
 .qbc-header {
   position: static;
-  // background-color: $color-green !important;
-  // color: $color-almond !important;
+  background-color: $color-green !important;
+  color: $color-almond !important;
+
+  &__nb {
+    padding: $spacer-4 $spacer-0;
+  }
+
+  &__brandwrap {
+    width: 20%;
+
+    .navbar-brand {
+      display: inline-flex;
+      height: 54px;
+      padding-top: 0;
+      padding-bottom: 0;
+      margin-right: 0;
+    }
+  }
+
+  .nav-link,
+  .dropdown-toggle {
+    display: inline-flex;
+    padding: $spacer-2 $spacer-3 !important;
+    color: $color-white;
+    &.show,
+    &:hover {
+      color: $color-yellow;
+    }
+  }
+
+  .dropdown-toggle {
+    &.show {
+      position: relative;
+      &::before {
+        content: "";
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        width: 0;
+        height: 0;
+        border-left: 42px solid transparent;
+        border-right: 42px solid transparent;
+        border-bottom: 42px solid $color-almond;
+        transform: translate(-50%, 160%);
+      }
+    }
+    &::after {
+      content: none;
+    }
+  }
+
+  .dropdown-menu {
+    left: -50%;
+    border-radius: 12px;
+    border-color: $color-almond;
+    overflow: hidden;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: 64px;
+    background-color: $color-almond;
+
+    &[aria-labelledby="products-dropdown"] {
+      min-width: 72vw;
+      width: 100%;
+      left: -100%;
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .qbc-header {
+    .dropdown-toggle.show {
+      &::before {
+        content: none;
+      }
+    }
+    .dropdown-menu {
+      margin-top: 0;
+    }
+  }
 }

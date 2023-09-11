@@ -1,0 +1,111 @@
+.qbc-cont{
+    color: $color-almond;
+    display: flex;
+    flex-direction: column;
+    min-height: 75px;
+    &__head{
+        font-size: 13px;
+        font-weight: 600;
+        margin-bottom: 16px;
+        span{
+            margin-left: 10px;
+            transform: translateY(-2px);
+            width: 13px;
+            height: 13px;
+        }
+    }
+    &__body{
+        margin-left: -4px;
+        display: flex;
+        // align-items: center;
+        margin-top: auto;
+        font-size: 13px;
+        font-weight: 500;
+        color: $color-white;
+        .qbc-cont__icons{
+            min-width: 35px;
+            // margin-right: 8px;
+        }
+        a{
+            color: $color-white;
+            transition: 0.3s;
+            &:hover{
+                color: $color-yellow;
+                transition: 0.3s;
+            }
+        }
+    }
+    a.qbc-cont__body{
+        transition: 0.3s;
+        &:hover{
+            transition: 0.3s;
+            color: $color-yellow;
+        }
+    }
+    &__icnwrap{
+        display: flex;
+        align-items: flex-end;
+        // margin: 0 -4px;
+    }
+    &__icons{
+        margin: 0 4px;
+        width: 35px;
+        height: 35px;
+        min-width: 35px;
+        transition: 0.3s;
+        svg{
+            width: 100%;
+            height: 100%;
+        }
+        &:hover{
+            transform: scale(1.1);
+            transition: 0.3s;
+        }
+        &--play{
+            width: 90px;
+            height: auto;
+            img{
+                width: 100%;
+                height: 100%;
+            }
+        }
+        &--terms{
+            color: $color-white;
+            padding: 0 8px;
+            width: auto;
+            height: auto;
+            &:last-child{
+                position: relative;
+                &::after{
+                    position: absolute;
+                    content: '';
+                    height: 100%;
+                    width: 1px;
+                    background-color: $color-white;
+                    left: -5px;
+                    top: 0;
+                }
+            }
+            &:hover{
+                transform: none;
+                color: $color-yellow;
+            }
+        }
+    }
+
+    &--red{
+        .qbc-cont__head{
+            color: $color-red;
+        }
+        .qbc-cont__body{
+            color: $color-black;
+        }
+        .qbc-cont__icons{
+            svg{
+                path{
+                 fill: $color-black;
+                }
+            }
+        }
+    }
+}

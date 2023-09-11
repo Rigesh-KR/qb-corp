@@ -1,82 +1,228 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- styles -->
-    <link rel="stylesheet" href="../assets/css/slick.css" />
-    <link rel="stylesheet" href="../assets/css/slick-theme.css" />
-    <link rel="stylesheet" href="../assets/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="../assets/css/style.css" />
-    <!-- styles -->
-    <title>Document</title>
-  </head>
-  <body>
-    <!-- header start -->
-    <header class="qbc-header">
-      <div class="content-wrapper">
-        <nav class="qbc-header__nb navbar navbar-expand-lg">
-          <div class="container-fluid">
-            <a href="" class="navbar-brand">Navbar</a>
-            <button
-              class="navbar-toggler"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#menu"
-              aria-controls="menu"
-              aria-expanded="false"
-              aria-label="toggle navigation"
-            >
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="menu">
-              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item dropdown">
-                  <a
-                    href=""
-                    class="nav-link dropdown-toggle"
-                    id="about-dropdown"
-                    role="button"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
-                  >
-                    about
-                  </a>
-                  <ul class="dropdown-menu" aria-labelledby="about-dropdown">
-                    <li><a href="" class="dropdown-item">overview</a></li>
-                    <li><a href="" class="dropdown-item">history</a></li>
-                  </ul>
-                </li>
-                <li class="nav-item dropdown">
-                  <a
-                    href=""
-                    class="nav-link dropdown-toggle"
-                    id="products-dropdown"
-                    role="button"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
-                  >
-                    products
-                  </a>
-                  <ul
-                    class="dropdown-menu"
-                    aria-labelledby="products-dropdown"
-                  ></ul>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </nav>
-      </div>
-    </header>
-    <!-- header end -->
 
-    <!-- scripts -->
-    <script src="../assets/js/jquery.slim.min.js"></script>
-    <script src="../assets/js/slick.min.js"></script>
-    <script src="../assets/js/bootstrap.bundle.min.js"></script>
-    <script src="../assets/js/script.js"></script>
-    <!-- scripts -->
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- styles -->
+  <link rel="stylesheet" href="../assets/css/slick.css" />
+  <link rel="stylesheet" href="../assets/css/slick-theme.css" />
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <!-- styles -->
+  <title>Document</title>
+</head>
+
+<body>
+  <!-- header start -->
+  <header class="qbc-header">
+    <div class="content-wrapper">
+      <nav class="qbc-header__nb navbar navbar-expand-lg">
+        <div class="qbc-header__brandwrap">
+          <a href="" class="navbar-brand">
+            <img src="../assets/images/qbfood.svg" alt="" srcset="">
+          </a>
+        </div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu"
+          aria-controls="menu" aria-expanded="false" aria-label="toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="menu">
+          <ul class="navbar-nav">
+            <li class="nav-item dropdown">
+              <a href="" class="nav-link dropdown-toggle" id="about-dropdown" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                about
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="about-dropdown">
+                <li><a href="" class="dropdown-item">overview</a></li>
+                <li><a href="" class="dropdown-item">history</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a href="" class="nav-link dropdown-toggle" id="products-dropdown" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                products
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="products-dropdown">
+                <div class="qbc-ffoods">
+                  <div class="qbc-ffood">
+                    <div class="qbc-ffood__outer">
+                      <div class="qbc-ffood__image">
+                        <img src="../assets/images/chilled-beef-bk.png" alt="" />
+                      </div>
+                      <span></span>
+                    </div>
+                    <div class="qbc-ffood__text">
+                      <p>Chilled Beef</p>
+                      <div class="qbc-ffood__link">
+                        <img src="../assets/images/icon-down.svg" alt="" />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="qbc-ffood">
+                    <div class="qbc-ffood__outer">
+                      <div class="qbc-ffood__image">
+                        <img src="../assets/images/chilled-lamb-bk.png" alt="" />
+                      </div>
+                      <span></span>
+                    </div>
+                    <div class="qbc-ffood__text">
+                      <p>Chilled Lamb</p>
+                      <div class="qbc-ffood__link">
+                        <img src="../assets/images/icon-down.svg" alt="" />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="qbc-ffood">
+                    <div class="qbc-ffood__outer">
+                      <div class="qbc-ffood__image">
+                        <img src="../assets/images/frozen-meat-bk.png" alt="" />
+                      </div>
+                      <span></span>
+                    </div>
+                    <div class="qbc-ffood__text">
+                      <p>Frozen Meat</p>
+                      <div class="qbc-ffood__link">
+                        <img src="../assets/images/icon-down.svg" alt="" />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="qbc-ffood">
+                    <div class="qbc-ffood__outer">
+                      <div class="qbc-ffood__image">
+                        <img src="../assets/images/sausages-bacon-bk.png" alt="" />
+                      </div>
+                      <span></span>
+                    </div>
+                    <div class="qbc-ffood__text">
+                      <p>Sausages & Bacon</p>
+                      <div class="qbc-ffood__link">
+                        <img src="../assets/images/icon-down.svg" alt="" />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="qbc-ffood">
+                    <div class="qbc-ffood__outer">
+                      <div class="qbc-ffood__image">
+                        <img src="../assets/images/cheese-dairy-bk.png" alt="" />
+                      </div>
+                      <span></span>
+                    </div>
+                    <div class="qbc-ffood__text">
+                      <p>Cheese & Dairy</p>
+                      <div class="qbc-ffood__link">
+                        <img src="../assets/images/icon-down.svg" alt="" />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="qbc-ffood">
+                    <div class="qbc-ffood__outer">
+                      <div class="qbc-ffood__image">
+                        <img src="../assets/images/seafood-bk.png" alt="" />
+                      </div>
+                      <span></span>
+                    </div>
+                    <div class="qbc-ffood__text">
+                      <p>Seafood</p>
+                      <div class="qbc-ffood__link">
+                        <img src="../assets/images/icon-down.svg" alt="" />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="qbc-ffood">
+                    <div class="qbc-ffood__outer">
+                      <div class="qbc-ffood__image">
+                        <img src="../assets/images/panty-essentials-bk.png" alt="" />
+                      </div>
+                      <span></span>
+                    </div>
+                    <div class="qbc-ffood__text">
+                      <p>Panty Essentials</p>
+                      <div class="qbc-ffood__link">
+                        <img src="../assets/images/icon-down.svg" alt="" />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="qbc-ffood">
+                    <div class="qbc-ffood__outer">
+                      <div class="qbc-ffood__image">
+                        <img src="../assets/images/plant-based-bk.png" alt="" />
+                      </div>
+                      <span></span>
+                    </div>
+                    <div class="qbc-ffood__text">
+                      <p>Plant Based</p>
+                      <div class="qbc-ffood__link">
+                        <img src="../assets/images/icon-down.svg" alt="" />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="qbc-ffood">
+                    <div class="qbc-ffood__outer">
+                      <div class="qbc-ffood__image">
+                        <img src="../assets/images/beverages-bk.png" alt="" />
+                      </div>
+                      <span></span>
+                    </div>
+                    <div class="qbc-ffood__text">
+                      <p>Beverages</p>
+                      <div class="qbc-ffood__link">
+                        <img src="../assets/images/icon-down.svg" alt="" />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="qbc-ffood">
+                    <div class="qbc-ffood__outer">
+                      <div class="qbc-ffood__image">
+                        <img src="../assets/images/assorted-frozen-bk.png" alt="" />
+                      </div>
+                      <span></span>
+                    </div>
+                    <div class="qbc-ffood__text">
+                      <p>Assorted Frozen</p>
+                      <div class="qbc-ffood__link">
+                        <img src="../assets/images/icon-down.svg" alt="" />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="qbc-ffood">
+                    <div class="qbc-ffood__outer">
+                      <div class="qbc-ffood__image">
+                        <img src="../assets/images/dessert-bk.png" alt="" />
+                      </div>
+                      <span></span>
+                    </div>
+                    <div class="qbc-ffood__text">
+                      <p>Dessert</p>
+                      <div class="qbc-ffood__link">
+                        <img src="../assets/images/icon-down.svg" alt="" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a href="" class="nav-link">catalogue</a>
+            </li>
+            <li class="nav-item">
+              <a href="" class="nav-link">contact</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <!-- header end -->
+
+  <!-- scripts -->
+  <script src="../assets/js/jquery.slim.min.js"></script>
+  <script src="../assets/js/slick.min.js"></script>
+  <script src="../assets/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/js/script.js"></script>
+  <!-- scripts -->
+</body>
+
 </html>

@@ -1,0 +1,44 @@
+.qbc-part-tile {
+    &__outer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    &__sec-1 {
+        width: 40%;
+        height: auto;
+        padding: $spacer-4 $spacer-1;
+        border-radius: 10px;
+        border: 1px solid rgba(140, 96, 201, 0.30);
+        &-img {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 180px;
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+    &__sec-2 {
+        width: 60%;
+        margin-left: $spacer-6;
+        .qbc-heading {
+            color: $color-violet;
+            font-size: 20px;
+            font-weight: 600;
+            padding-bottom: $spacer-3;
+            margin-bottom: $spacer-3;
+            display: flex;
+            justify-content: flex-end;
+            border-bottom: 3px solid $color-violet;
+            img {
+                margin-left: $spacer-3;
+            }
+        }
+        .qbc-heading__text {
+            font-size: 13px;
+        }
+    }
+}
