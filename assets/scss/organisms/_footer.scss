@@ -3,11 +3,11 @@
     &__outer{
         padding: 40px 0;
         display: flex;
-        margin: 0 -8px;
+        margin: 0 -12px;
         justify-content: space-between;
     }
     &__logo{
-        width: calc(14% - 16px);
+        width: calc(13% - 16px);
         margin: 0 8px;
         margin-right: 24px !important;
         // max-width: 165px;
@@ -17,11 +17,11 @@
     }
     &__sec{
         width: calc(16% - 16px);
-        margin: 0 8px;
+        margin: 0 12px;
         // max-width: 165px;
     }
     &__contact{
-        width: calc(13% - 16px);
+        width: calc(15% - 16px);
     }
     &__app{
         width: calc(20% - 16px);
@@ -31,11 +31,11 @@
     }
     
     &__copy{
-        width: calc(20% - 16px);
+        width: calc(22% - 16px);
         max-width: none;
         font-size: 13px;
         font-weight: 500;
-        margin-left: 35px !important;
+        margin-left: 25px !important;
     }
 }
 
