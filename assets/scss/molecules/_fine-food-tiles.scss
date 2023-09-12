@@ -1,0 +1,68 @@
+.qbc-ffoods {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #f0e4c9;
+  border-radius: 15px;
+  box-shadow: 0px 9px 26px 0px rgba(23, 15, 73, 0.05),
+    0px 10px 14px 0px rgba(74, 58, 255, 0.01);
+  padding: $spacer-3 $spacer-3;
+
+  .qbc-ffood {
+    width: calc(16.66% - 16px);
+    margin: 0 8px;
+    margin-bottom: 16px;
+
+    &__outer {
+      border-radius: 14px;
+      border: 2px solid rgba(195, 39, 27, 0.3490196078);
+      padding: 16px;
+      width: 104px;
+      height: 104px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    &__image {
+      width: 54px;
+      height: auto;
+      display: flex;
+      align-content: center;
+      justify-content: center;
+      text-align: center;
+      margin: 0 auto;
+      img {
+        height: auto;
+        width: 100%;
+      }
+    }
+    &__text {
+      text-align: center;
+      display: flex;
+      align-content: center;
+      justify-content: center;
+      color: $color-grey;
+      p {
+        font-size: 14px;
+        padding-top: 16px;
+        font-weight: 600;
+        padding-right: 10px;
+      }
+    }
+    &__link {
+      width: 12px;
+      padding-top: 15px;
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@include mobile {
+  .qbc-ffoods {
+    .qbc-ffood {
+      width: calc(50% - 16px);
+    }
+  }
+}
