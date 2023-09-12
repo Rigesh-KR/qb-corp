@@ -17,13 +17,15 @@
 @import "molecules/tab-products";
 @import "molecules/tab-brands";
 @import "molecules/tab-partners";
-@import "molecules/tab-facilities";
+@import "molecules/tab-capabilities";
 @import "molecules/our-journey";
 @import "molecules/partners-tile";
 @import "molecules/time-line";
 @import "molecules/contact-form";
 @import "molecules/fine-food-tiles";
 @import "molecules/our-journey-bottom";
+@import "molecules/chilldBeef-product";
+@import "molecules/product-type";
 
 // organism
 @import "organisms/header";
@@ -33,5 +35,6 @@
 @import "organisms/status-sec";
 @import "organisms/tab-module";
 @import "organisms/lets-talk";
+@import "organisms/map-module";
 @import "organisms/experience";
 @import "organisms/product-list";
