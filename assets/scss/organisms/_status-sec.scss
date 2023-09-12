@@ -1,5 +1,5 @@
 .qbc-status-sec{
-    margin-top: 400px;
+    // margin-top: 400px;
     background-color: rgba(240, 228, 201, .2);
     padding: 40px 0;
     &__outer{
@@ -26,6 +26,7 @@
         }
         &--logo{
             border: 0;
+            justify-content: unset;
             .qbc-status-sec__subtitle{
                 margin: 0 auto;
                 width: 70%;
@@ -42,9 +43,9 @@
             }
         }
         .qbc-heading{
-            color: $color-black;
+            color: $color-black-1;
             font-size: 25px;
-            width: 95%;
+            width: 100%;
             margin-bottom: 0;
             img{
                 width: 18px;
