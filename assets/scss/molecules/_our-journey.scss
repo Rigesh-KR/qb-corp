@@ -1,5 +1,5 @@
 .qbc-our-jrny {
-    padding: $spacer-4 $spacer-0;
+    padding: 50px $spacer-0;
     &__outer {
         display: flex;
         align-items: center;
@@ -8,7 +8,7 @@
     &__sec-1 {
         width: 55%;
         &-img {
-            width: 92%;
+            width: 85%;
             border: 20px solid #f6f4da;
             box-shadow: 10px 10px 10px 0px rgba(0, 0, 0, 0.20);
             transform: rotate(-6deg);

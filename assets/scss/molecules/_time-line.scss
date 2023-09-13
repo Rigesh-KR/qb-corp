@@ -35,6 +35,7 @@
           }
           &:first-child {
             &::after {
+                border-top: 0;
               border-top-left-radius: 0;
             }
             .qbc-timeline__side {
