@@ -1,6 +1,6 @@
 .qbc-mainbanner{
     padding: 30px 0;
-    color: #fff;
+    color: $color-almond;
     position: relative;
     min-height: 400px;
     display: flex;
@@ -12,6 +12,7 @@
         height: 100%;
         left: 0;
         top: 0;
+        padding-top: 16px;
     }
     &__bgimg{
         width: 100%;
@@ -76,7 +77,7 @@
 
 @include tablet{
     .qbc-mainbanner{
-        min-height: 300px;
+        min-height: 600px;
         &__head{
             width: 60%;
             font-size: 50px;
@@ -98,7 +99,7 @@
 
 @include mobile{
     .qbc-mainbanner{
-        min-height: 250px;
+        min-height: 400px;
         &__head{
             width: 100%;
             font-size: 50px;
