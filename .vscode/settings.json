@@ -15,7 +15,7 @@
       "savePath": "~/../css"
     }
   ],
-  "liveSassCompile.settings.generateMap": false,
+  "liveSassCompile.settings.generateMap": true,
   "liveSassCompile.settings.excludeList": [
     "/**/node_modules/**",
     "/.vscode/**"
