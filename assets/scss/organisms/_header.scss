@@ -113,6 +113,7 @@
           padding: $spacer-2 $spacer-3;
         }
         .dropdown-menu-head {
+          width: 100%;
           white-space: nowrap;
           font-weight: 500;
           padding: $spacer-2 $spacer-0;
@@ -195,7 +196,7 @@
             position: static;
           }
           li {
-            display: block;
+            display: flex;
           }
           & > li:hover > .dropdown-submenu {
             display: none;
