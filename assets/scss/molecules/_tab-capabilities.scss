@@ -1,9 +1,9 @@
 .qbc-facilities {
-  &__main{
-    // .qbc-heading__main{
-    //   width: 50%;
-    // }
-  }
+  // &__main{
+  //   // .qbc-heading__main{
+  //   //   width: 50%;
+  //   // }
+  // }
   display: flex;
   &__body {
     width: 50%;
@@ -14,6 +14,7 @@
   }
   &__imgs-wrap {
     display: flex;
+    align-items: self-start;
     flex: 1;
     margin: 0 -8px;
   }

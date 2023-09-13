@@ -1,3 +1,6 @@
+
+$opacity:0.35;
+
 .qbc-prdct {
   &__main {
     .qbc-heading {
@@ -25,89 +28,117 @@
     flex-direction: column;
     align-items: center;
     padding: $spacer-3;
-    &--cv0 {
-      border-color:$color-beef;
+    transition: all 0.5s;
+    &--beef {
+      border-color: rgba($color-beef, $opacity);
       .qbc-prdct__tile-txt {
         color: $color-beef;
       }
       svg{
         fill:$color-beef;
       }
+      &:hover{
+        border-color: rgba($color-beef, 1);
+      }
     }
-    &--cv1 {
-      border-color: $color-lamb;
+    &--lamb {
+      border-color: rgba($color-lamb, $opacity);
       .qbc-prdct__tile-txt {
         color: $color-lamb;
       }
       svg{
         fill:$color-lamb;
       }
+      &:hover{
+        border-color: rgba($color-lamb, 1);
+      }
     }
-    &--cv2 {
-      border-color: $color-FrozenMeat;
+    &--FrozenMeat {
+      border-color: rgba($color-FrozenMeat, $opacity);
       .qbc-prdct__tile-txt {
         color:$color-FrozenMeat;
       }
       svg{
         stroke:$color-FrozenMeat; 
       }
+      &:hover{
+        border-color: rgba($color-FrozenMeat, 1);
+      }
     }
-    &--cv3 {
-      border-color:$color-Sausages;
+    &--Sausages {
+      border-color: rgba($color-Sausages, $opacity);
       .qbc-prdct__tile-txt {
         color:$color-Sausages;
       }
       svg{
         fill:$color-Sausages;
       }
+      &:hover{
+        border-color: rgba($color-Sausages, 1);
+      }
     }
-    &--cv4 {
-      border-color: $color-cheese;
+    &--cheese {
+      border-color: rgba( $color-cheese, $opacity);
       .qbc-prdct__tile-txt {
         color: $color-cheese;
       }
       svg{
         fill:$color-cheese;
       }
+      &:hover{
+        border-color: rgba($color-cheese, 1);
+      }
     }
-    &--cv5 {
-      border-color:$color-SeaFood;
+    &--SeaFood {
+      border-color: rgba($color-SeaFood, $opacity);
       .qbc-prdct__tile-txt {
         color:$color-SeaFood;
       }
       svg{
         fill:$color-SeaFood;
       }
+      &:hover{
+        border-color: rgba($color-SeaFood, 1);
+      }
     }
-    &--cv6 {
-      border-color:$color-pantry;
+    &--pantry {
+      border-color: rgba($color-pantry, $opacity);
       .qbc-prdct__tile-txt {
         color:$color-pantry;
       }
       svg{
         fill:$color-pantry;
       }
+      &:hover{
+        border-color: rgba($color-pantry, 1);
+      }
     }
-    &--cv7 {
-      border-color:$color-PlantBased;
+    &--PlantBased {
+      border-color: rgba($color-PlantBased, $opacity);
       .qbc-prdct__tile-txt {
         color:$color-PlantBased;
       }
       svg{
         fill:$color-PlantBased;
       }
+      &:hover{
+        border-color: rgba($color-PlantBased, 1);
+      }
     }
-    &--cv8 {
-      border-color:$color-beverages;
+    &--beverages {
+      border-color: rgba($color-beverages, $opacity);
       .qbc-prdct__tile-txt {
         color:$color-beverages;
       }
       svg{
         fill:$color-beverages;
       }
+      &:hover{
+        border-color: rgba($color-beverages, 1);
+      }
     }
-    &--cv9 {
-      border-color:$color-AssortedFrozen;
+    &--AssortedFrozen {
+      border-color: rgba($color-AssortedFrozen, $opacity);
       .qbc-prdct__tile-txt {
         color:$color-AssortedFrozen;
       }
@@ -115,14 +146,20 @@
         // fill:$color-AssortedFrozen;
         stroke:$color-AssortedFrozen;
       }
+      &:hover{
+        border-color: rgba($color-AssortedFrozen, 1);
+      }
     }
-    &--cv10 {
-      border-color:$color-Dessert;
+    &--Dessert {
+      border-color: rgba($color-Dessert, $opacity);
       .qbc-prdct__tile-txt {
         color:$color-Dessert;
       }
       svg{
         fill:$color-Dessert;
+      }
+      &:hover{
+        border-color: rgba($color-Dessert, 1);
       }
     }
     &-img {

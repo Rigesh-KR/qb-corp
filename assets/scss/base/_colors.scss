@@ -14,11 +14,11 @@ $color-mandalay: #A67815;
 $color-violet: #8C60C9;
 
 //
-$color-beef:var(--Beef, rgba(195, 39, 27, 1));
-$color-lamb:var(--Lamb, rgba(95, 155, 65, 1));
+$color-beef:rgba(195, 39, 27, 1);
+$color-lamb:rgba(95, 155, 65, 1);
 $color-FrozenMeat:rgba(255, 61, 98, 1);
 $color-Sausages:rgba(164, 32, 55, 1);
-$color-cheese:var(--cheese-diary, #E9A715);
+$color-cheese:#E9A715;
 $color-SeaFood:rgba(219, 87, 123, 1);
 $color-pantry:rgba(125, 73, 156, 1);
 $color-PlantBased:rgba(97, 197, 39, 1);;
@@ -41,12 +41,9 @@ $color-drygoods: #7d499c;
 $color-bakery: #a5663a;
 
 //
-$color-beef: var(--Beef, #c3271b);
-$color-lamb: var(--Lamb, #5f9b41);
 $color-pork: #ff3d62;
 $color-chicken: #f07225;
 $color-char: #a42037;
-$color-cheese: var(--cheese-diary, #e9a715);
 $color-fruits: #3d969e;
 $color-veg: #61c527;
 $color-drygoods: #7d499c;
