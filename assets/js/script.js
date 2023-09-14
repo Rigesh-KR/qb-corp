@@ -101,27 +101,27 @@ window.addEventListener("load", () => {
 
 // ==============MAP VIEW WITH COUNTRIES==============
 
-  document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function () {
   const productsLink = document.getElementById("products-link");
   const productA = document.getElementById("product-a");
   const productB = document.getElementById("product-b");
   // Initially, show Product A and hide Product B
-    if (productsLink) { 
-      productA.classList.add("active");
+  if (productsLink) {
+    productA.classList.add("active");
 
-      productsLink.addEventListener("click", function (event) {
+    productsLink.addEventListener("click", function (event) {
       event.preventDefault();
 
       if (productA.classList.contains("active")) {
-      productA.classList.remove("active");
-      productB.classList.add("active");
+        productA.classList.remove("active");
+        productB.classList.add("active");
       } else {
-      productA.classList.add("active");
-      productB.classList.remove("active");
+        productA.classList.add("active");
+        productB.classList.remove("active");
       }
     });
   }
-  });
+});
 // ==============MAP VIEW WITH PRODUCTS AND PARTNERS==============
 // Get references to the links and divs
 const link1 = document.getElementById("products");
@@ -129,32 +129,50 @@ const link2 = document.getElementById("partners");
 const div1 = document.getElementById("products-body");
 const div2 = document.getElementById("partners-body");
 
-if (link1, link2) { 
-// Add click event listeners to the links
-link1.addEventListener("click", () => {
+if ((link1, link2)) {
+  // Add click event listeners to the links
+  link1.addEventListener("click", () => {
     toggleDiv(div1);
     hideDiv(div2);
     hideDiv(div3);
-});
+  });
 
-link2.addEventListener("click", () => {
+  link2.addEventListener("click", () => {
     toggleDiv(div2);
     hideDiv(div1);
     hideDiv(div3);
-});
-// Function to toggle the visibility of a div
-function toggleDiv(element) {
+  });
+  // Function to toggle the visibility of a div
+  function toggleDiv(element) {
     if (element.style.display === "none" || element.style.display === "") {
-        element.style.display = "block";
-
+      element.style.display = "block";
     } else {
-        element.style.display = "none";
+      element.style.display = "none";
     }
-}
-// Function to hide a div
-function hideDiv(element) {
+  }
+  // Function to hide a div
+  function hideDiv(element) {
     element.style.display = "none";
-
+  }
 }
-}
 
+document.querySelectorAll(".dropdown-menu").forEach((drop) => {
+  drop.addEventListener("click", (e) => {
+    if (e.target.classList.contains("dropdown-m-drop")) {
+      e.stopPropagation();
+      let cel = e.target.nextSibling.nextElementSibling.nextElementSibling;
+      while (cel) {
+        if (cel.classList.contains("dropdown-submenu")) break;
+        cel = cel.nextElementSibling;
+      }
+
+      if (cel) {
+        if (cel.classList.contains("show")) {
+          cel.classList.remove("show");
+        } else {
+          cel.classList.add("show");
+        }
+      }
+    }
+  });
+});

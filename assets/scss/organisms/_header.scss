@@ -48,6 +48,10 @@
     }
     .nav-item .nav-link {
       color: $color-white;
+      &:hover,
+      &.show {
+        color: $color-yellow;
+      }
     }
   }
 
@@ -96,6 +100,20 @@
           position: relative;
           width: auto;
           border-bottom: 2px solid $color-red;
+
+          &::after {
+            content: "";
+            position: absolute;
+            right: 0;
+            top: 50%;
+            width: 14px;
+            height: 14px;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='11' height='11' viewBox='0 0 11 11' fill='none'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M2.50716 11L2.31901 8.56445L6.90016 8.12634L0 1.88908L1.45704 0L8.38345 6.24197L7.98091 1.27666L10.2474 1.07409L11 10.218L2.50716 11Z' fill='%23A20C33'/%3E%3C/svg%3E");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            transform: translateY(-50%);
+          }
         }
       }
 
@@ -194,9 +212,19 @@
         &[aria-labelledby="brand-dropdown"] {
           .dropdown-submenu {
             position: static;
+            &.show {
+              display: block !important;
+            }
           }
           li {
-            display: flex;
+            display: block;
+          }
+          .dropdown-item {
+            display: inline-block;
+            width: auto;
+          }
+          .dropdown-m-drop {
+            display: inline-block;
           }
           & > li:hover > .dropdown-submenu {
             display: none;
