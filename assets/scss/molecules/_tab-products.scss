@@ -1,0 +1,218 @@
+
+$opacity:0.35;
+
+.qbc-prdct {
+  &__main {
+    .qbc-heading {
+      text-align: center;
+    }
+    .qbc-heading__text {
+      text-align: center;
+      width: 80%;
+      margin: 0 auto $spacer-4;
+    }
+  }
+
+  &__tiles {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -8px;
+    padding-top: $spacer-4;
+  }
+  &__tile {
+    width: calc(16.66% - 16px);
+    margin: 0 8px 24px;
+    border-radius: 10px;
+    border: 1px solid #6797d4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: $spacer-3;
+    transition: all 0.5s;
+    &--beef {
+      border-color: rgba($color-beef, $opacity);
+      .qbc-prdct__tile-txt {
+        color: $color-beef;
+      }
+      svg{
+        fill:$color-beef;
+      }
+      &:hover{
+        border-color: rgba($color-beef, 1);
+      }
+    }
+    &--lamb {
+      border-color: rgba($color-lamb, $opacity);
+      .qbc-prdct__tile-txt {
+        color: $color-lamb;
+      }
+      svg{
+        fill:$color-lamb;
+      }
+      &:hover{
+        border-color: rgba($color-lamb, 1);
+      }
+    }
+    &--FrozenMeat {
+      border-color: rgba($color-FrozenMeat, $opacity);
+      .qbc-prdct__tile-txt {
+        color:$color-FrozenMeat;
+      }
+      svg{
+        stroke:$color-FrozenMeat; 
+      }
+      &:hover{
+        border-color: rgba($color-FrozenMeat, 1);
+      }
+    }
+    &--Sausages {
+      border-color: rgba($color-Sausages, $opacity);
+      .qbc-prdct__tile-txt {
+        color:$color-Sausages;
+      }
+      svg{
+        fill:$color-Sausages;
+      }
+      &:hover{
+        border-color: rgba($color-Sausages, 1);
+      }
+    }
+    &--cheese {
+      border-color: rgba( $color-cheese, $opacity);
+      .qbc-prdct__tile-txt {
+        color: $color-cheese;
+      }
+      svg{
+        fill:$color-cheese;
+      }
+      &:hover{
+        border-color: rgba($color-cheese, 1);
+      }
+    }
+    &--SeaFood {
+      border-color: rgba($color-SeaFood, $opacity);
+      .qbc-prdct__tile-txt {
+        color:$color-SeaFood;
+      }
+      svg{
+        fill:$color-SeaFood;
+      }
+      &:hover{
+        border-color: rgba($color-SeaFood, 1);
+      }
+    }
+    &--pantry {
+      border-color: rgba($color-pantry, $opacity);
+      .qbc-prdct__tile-txt {
+        color:$color-pantry;
+      }
+      svg{
+        fill:$color-pantry;
+      }
+      &:hover{
+        border-color: rgba($color-pantry, 1);
+      }
+    }
+    &--PlantBased {
+      border-color: rgba($color-PlantBased, $opacity);
+      .qbc-prdct__tile-txt {
+        color:$color-PlantBased;
+      }
+      svg{
+        fill:$color-PlantBased;
+      }
+      &:hover{
+        border-color: rgba($color-PlantBased, 1);
+      }
+    }
+    &--beverages {
+      border-color: rgba($color-beverages, $opacity);
+      .qbc-prdct__tile-txt {
+        color:$color-beverages;
+      }
+      svg{
+        fill:$color-beverages;
+      }
+      &:hover{
+        border-color: rgba($color-beverages, 1);
+      }
+    }
+    &--AssortedFrozen {
+      border-color: rgba($color-AssortedFrozen, $opacity);
+      .qbc-prdct__tile-txt {
+        color:$color-AssortedFrozen;
+      }
+      svg{
+        // fill:$color-AssortedFrozen;
+        stroke:$color-AssortedFrozen;
+      }
+      &:hover{
+        border-color: rgba($color-AssortedFrozen, 1);
+      }
+    }
+    &--Dessert {
+      border-color: rgba($color-Dessert, $opacity);
+      .qbc-prdct__tile-txt {
+        color:$color-Dessert;
+      }
+      svg{
+        fill:$color-Dessert;
+      }
+      &:hover{
+        border-color: rgba($color-Dessert, 1);
+      }
+    }
+    &-img {
+      // height: 100px;
+      margin: $spacer-2 0 $spacer-3 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      svg{
+        height: 75px;
+      }
+      img {
+        width: 100%;
+        // height: 100%;
+        align-items: center;
+      }
+    }
+    &-txt {
+      text-align: center;
+      font-size: 15px;
+      color: #6797d4;
+    }
+  }
+}
+
+@include tablet {
+  .qbc-prdct {
+    &__main {
+      .qbc-heading__text {
+        text-align: center;
+        width: 100%;
+        margin: 0 auto;
+      }
+    }
+
+    &__tile {
+      width: calc(33.33% - 16px);
+    }
+  }
+}
+
+@include mobile {
+  .qbc-prdct {
+    &__main {
+      .qbc-heading__text {
+        text-align: center;
+        width: 100%;
+        margin: 0 auto $spacer-3;
+      }
+    }
+
+    &__tile {
+      width: calc(100% - 16px);
+    }
+  }
+}

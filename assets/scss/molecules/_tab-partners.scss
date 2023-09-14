@@ -1,0 +1,75 @@
+.qbc-partners {
+  display: flex;
+  &__body {
+    width: 50%;
+    padding-left: $spacer-6;
+    order: 2;
+  }
+  .qbc-heading__text {
+    margin-bottom: $spacer-4;
+  }
+  &__left{
+    width: 50%;
+    background-size: 90%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    &-head{
+      display: flex;
+      flex-direction: column;
+      margin-bottom: $spacer-3;
+      &-cap{
+        color:$color-grey;
+        font-size:65px;
+        font-weight: $font-regular;
+        line-height: 1; /* 95% */
+        &-sub{
+          font-size:50px;
+          line-height:45px;
+        }
+      }
+      &-value{
+        color:$color-red;
+        font-size:100px;
+        font-weight: $font-regular;
+        line-height:80px;
+      }
+    }
+    &-text{
+      font-size: 16px;
+      color: $color-grey2;
+    }
+  }
+}
+
+@include mobile {
+  .qbc-partners {
+    flex-direction: column;
+    &__body {
+      width:100%;
+      padding-left: $spacer-0;
+      order: 1;
+    }
+    .qbc-heading__text {
+      margin-bottom: $spacer-4;
+    }
+    &__left{
+      width:100%;
+      margin-bottom: $spacer-4;
+      &-head{
+        margin-bottom: $spacer-2;
+        &-value{
+          font-size:50px;
+          line-height: 1;
+        }
+        &-cap{
+          font-size: $spacer-5;
+          line-height: 1;
+        }
+      }
+    }
+  }
+}
+

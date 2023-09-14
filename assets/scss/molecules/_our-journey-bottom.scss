@@ -1,0 +1,46 @@
+.qbc-journey-bottom {
+  display: flex;
+  justify-content: center;
+  margin: 40px 0;
+  // position: relative;
+  top: 0;
+  left: 0;
+  &__banner {
+    max-width: 70%;
+    position: relative;
+    img {
+      width: 100%;
+    }
+  }
+  &__logo {
+    position: absolute;
+    top: 16px;
+    right: 22px;
+    width: 200px;
+    height: auto;
+    img {
+      width: 100%;
+    }
+  }
+}
+
+@include tablet {
+  .qbc-journey-bottom {
+    &__logo {
+      width: 150px;
+    }
+  }
+}
+
+@include mobile {
+  .qbc-journey-bottom {
+    &__banner {
+      max-width: 100%;
+    }
+    &__logo {
+      top: 10px;
+      right: 6px;
+      width: 100px;
+    }
+  }
+}

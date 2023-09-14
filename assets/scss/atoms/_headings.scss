@@ -1,0 +1,43 @@
+.qbc-heading {
+  font-size: $spacer-5;
+  color: $color-red;
+  margin-bottom: $spacer-4;
+
+  img {
+    // margin-left: $spacer-2;
+    // margin-top: 10px;
+    transform: translate(0px, 0px);
+    width: 25px;
+  }
+
+  &__text {
+    font-size: 16px;
+  }
+}
+
+@include tablet {
+  .qbc-heading {
+    &__main {
+      margin-bottom: $spacer-3;
+    }
+    font-size: $spacer-4;
+    img{
+      width: 20px;
+    }
+  }
+}
+
+@include mobile {
+  .qbc-heading {
+    &__main {
+      margin-bottom: $spacer-3;
+    }
+    font-size: $spacer-4;
+
+    img {
+      margin-left: $spacer-2;
+      margin-top: 5px;
+      width: 15px;
+    }
+  }
+}

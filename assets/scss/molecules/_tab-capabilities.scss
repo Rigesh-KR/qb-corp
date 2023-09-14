@@ -1,0 +1,116 @@
+.qbc-facilities {
+  // &__main{
+  //   // .qbc-heading__main{
+  //   //   width: 50%;
+  //   // }
+  // }
+  display: flex;
+  &__body {
+    width: 50%;
+    padding-right: $spacer-6;
+  }
+  .qbc-heading__text {
+    margin-bottom: $spacer-4;
+  }
+  &__imgs-wrap {
+    display: flex;
+    align-items: self-start;
+    flex: 1;
+    margin: 0 -8px;
+  }
+  &__imgs {
+    width: calc(33.33% - 16px);
+    margin: 0 $spacer-2;
+    border-radius: 15px;
+    position: relative;
+    font-size: 0;
+    overflow: hidden;
+    &-overlay{
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color:rgba(51, 102, 62, 0.8);
+      border-radius: 15px;
+      left: 0;
+      top: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      color: $color-white;
+      text-align: center;
+      transition:all 0.3s;
+      &-plus{
+        font-size: 40px;
+        color: $color-white;
+        font-weight: $font-regular;
+      }
+      &-cap{
+        font-size:$spacer-4;
+        margin-bottom: $spacer-1;
+        line-height: 26px;
+        &-sub{
+          font-size:12px;
+        }
+      }
+    }
+    img {
+      width: 100%;
+      border-radius: 15px;
+      
+    }
+    &:hover{
+      .qbc-facilities__imgs-overlay{
+        // transform: ();
+        // transform: translate(0px, -100%);
+        opacity: 0;
+      }
+    }
+  }
+  &__list{
+    margin: 0;
+    padding: 0 0 0 $spacer-3;
+  }
+  &__item{
+    margin-bottom: $spacer-4;
+    padding-left: $spacer-3;
+    position: relative;
+    &::before{
+      content: "\2022"; 
+      color:$color-black-1;
+      font-weight: bold; 
+      position: absolute;
+      left: 0;
+    }
+  }
+}
+@include tablet{
+  .qbc-facilities {
+    flex-direction: column;
+    &__body {
+      width:100%;
+    }
+  }
+}
+@include mobile {
+  .qbc-facilities {
+    flex-direction: column;
+    &__body {
+      width: 100%;
+      padding-right: $spacer-0;
+    }
+    &__imgs{
+      &-overlay{
+        &-cap{
+          font-size:$spacer-3;
+          line-height: 18px;
+          margin-bottom: $spacer-2;
+          &-sub{
+            font-size:11px;
+            padding: 0 $spacer-3;
+          }
+        }
+      }
+    }
+  }
+}
