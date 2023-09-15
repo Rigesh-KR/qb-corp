@@ -41,13 +41,14 @@
   &__itemout {
     &--country {
       .qbc-product-list__items {
+        text-transform: uppercase;
         font-weight: 400;
       }
     }
   }
   &__items {
     margin-top: 8px;
-    font-size: 17px;
+    font-size: 14px;
     font-weight: 700;
     color: $color-black2;
     padding-bottom: 8px;
