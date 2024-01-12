@@ -1,5 +1,4 @@
-
-$opacity:0.35;
+$opacity: 0.35;
 
 .qbc-prdct {
   &__main {
@@ -29,16 +28,29 @@ $opacity:0.35;
     align-items: center;
     padding: $spacer-3;
     transition: all 0.5s;
+
+    &.active {
+      svg {
+        fill: $color-white;
+      }
+      .qbc-prdct__tile-txt {
+        color: $color-white;
+      }
+    }
+
     &--beef {
       border-color: rgba($color-beef, $opacity);
       .qbc-prdct__tile-txt {
         color: $color-beef;
       }
-      svg{
-        fill:$color-beef;
+      svg {
+        fill: $color-beef;
       }
-      &:hover{
+      &:hover {
         border-color: rgba($color-beef, 1);
+      }
+      &.active {
+        background-color: $color-beef;
       }
     }
     &--lamb {
@@ -46,120 +58,155 @@ $opacity:0.35;
       .qbc-prdct__tile-txt {
         color: $color-lamb;
       }
-      svg{
-        fill:$color-lamb;
+      svg {
+        fill: $color-lamb;
       }
-      &:hover{
+      &:hover {
         border-color: rgba($color-lamb, 1);
+      }
+      &.active {
+        background-color: $color-lamb;
       }
     }
     &--FrozenMeat {
       border-color: rgba($color-FrozenMeat, $opacity);
       .qbc-prdct__tile-txt {
-        color:$color-FrozenMeat;
+        color: $color-FrozenMeat;
       }
-      svg{
-        stroke:$color-FrozenMeat; 
+      svg {
+        stroke: $color-FrozenMeat;
       }
-      &:hover{
+      &:hover {
         border-color: rgba($color-FrozenMeat, 1);
+      }
+      &.active {
+        background-color: $color-FrozenMeat;
+        svg {
+          fill: transparent;
+          stroke: $color-white;
+        }
       }
     }
     &--Sausages {
       border-color: rgba($color-Sausages, $opacity);
       .qbc-prdct__tile-txt {
-        color:$color-Sausages;
+        color: $color-Sausages;
       }
-      svg{
-        fill:$color-Sausages;
+      svg {
+        fill: $color-Sausages;
       }
-      &:hover{
+      &:hover {
         border-color: rgba($color-Sausages, 1);
+      }
+      &.active {
+        background-color: $color-Sausages;
       }
     }
     &--cheese {
-      border-color: rgba( $color-cheese, $opacity);
+      border-color: rgba($color-cheese, $opacity);
       .qbc-prdct__tile-txt {
         color: $color-cheese;
       }
-      svg{
-        fill:$color-cheese;
+      svg {
+        fill: $color-cheese;
       }
-      &:hover{
+      &:hover {
         border-color: rgba($color-cheese, 1);
+      }
+      &.active {
+        background-color: $color-cheese;
       }
     }
     &--SeaFood {
       border-color: rgba($color-SeaFood, $opacity);
       .qbc-prdct__tile-txt {
-        color:$color-SeaFood;
+        color: $color-SeaFood;
       }
-      svg{
-        fill:$color-SeaFood;
+      svg {
+        fill: $color-SeaFood;
       }
-      &:hover{
+      &:hover {
         border-color: rgba($color-SeaFood, 1);
+      }
+      &.active {
+        background-color: $color-SeaFood;
       }
     }
     &--pantry {
       border-color: rgba($color-pantry, $opacity);
       .qbc-prdct__tile-txt {
-        color:$color-pantry;
+        color: $color-pantry;
       }
-      svg{
-        fill:$color-pantry;
+      svg {
+        fill: $color-pantry;
       }
-      &:hover{
+      &:hover {
         border-color: rgba($color-pantry, 1);
+      }
+      &.active {
+        background-color: $color-pantry;
       }
     }
     &--PlantBased {
       border-color: rgba($color-PlantBased, $opacity);
       .qbc-prdct__tile-txt {
-        color:$color-PlantBased;
+        color: $color-PlantBased;
       }
-      svg{
-        fill:$color-PlantBased;
+      svg {
+        fill: $color-PlantBased;
       }
-      &:hover{
+      &:hover {
         border-color: rgba($color-PlantBased, 1);
+      }
+      &.active {
+        background-color: $color-PlantBased;
       }
     }
     &--beverages {
       border-color: rgba($color-beverages, $opacity);
       .qbc-prdct__tile-txt {
-        color:$color-beverages;
+        color: $color-beverages;
       }
-      svg{
-        fill:$color-beverages;
+      svg {
+        fill: $color-beverages;
       }
-      &:hover{
+      &:hover {
         border-color: rgba($color-beverages, 1);
       }
     }
     &--AssortedFrozen {
       border-color: rgba($color-AssortedFrozen, $opacity);
       .qbc-prdct__tile-txt {
-        color:$color-AssortedFrozen;
+        color: $color-AssortedFrozen;
       }
-      svg{
+      svg {
         // fill:$color-AssortedFrozen;
-        stroke:$color-AssortedFrozen;
+        stroke: $color-AssortedFrozen;
       }
-      &:hover{
+      &:hover {
         border-color: rgba($color-AssortedFrozen, 1);
+      }
+      &.active {
+        background-color: $color-AssortedFrozen;
+        svg,
+        svg d {
+          stroke: $color-white !important;
+        }
       }
     }
     &--Dessert {
       border-color: rgba($color-Dessert, $opacity);
       .qbc-prdct__tile-txt {
-        color:$color-Dessert;
+        color: $color-Dessert;
       }
-      svg{
-        fill:$color-Dessert;
+      svg {
+        fill: $color-Dessert;
       }
-      &:hover{
+      &:hover {
         border-color: rgba($color-Dessert, 1);
+      }
+      &.active {
+        background-color: $color-Dessert;
       }
     }
     &-img {
@@ -168,7 +215,7 @@ $opacity:0.35;
       display: flex;
       justify-content: center;
       align-items: center;
-      svg{
+      svg {
         height: 75px;
       }
       img {

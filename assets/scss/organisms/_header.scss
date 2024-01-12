@@ -49,7 +49,8 @@
     .nav-item .nav-link {
       color: $color-white;
       &:hover,
-      &.show {
+      &.show,
+      &.active {
         color: $color-yellow;
       }
     }
@@ -80,21 +81,32 @@
     .dropdown-menu {
       left: -50%;
       border-radius: 12px;
-      border-color: $color-almond;
+      // border-color: $color-almond;
+      border: none;
+      border-color: transparent;
       padding-top: 0;
       padding-bottom: 0;
       margin-top: 64px;
       background-color: $color-almond;
-
+      background-color: transparent;
+      // min-height: 100%;
       .dropdown-item {
         background-color: transparent;
         color: $color-grey;
         font-weight: 500;
       }
 
+      li {
+        background-color: $color-almond;
+      }
+
       &[aria-labelledby="about-dropdown"] {
         padding: $spacer-3 $spacer-3;
+        background-color: $color-almond;
 
+        li {
+          background-color: $color-almond;
+        }
         .dropdown-item {
           padding: $spacer-2 $spacer-0;
           position: relative;
@@ -152,8 +164,11 @@
           display: none;
           position: absolute;
           left: 100%;
-          top: 0;
+          // top: 0;
+          // top: 50%;
+          transform: translateY(45%);
           margin-top: 0;
+          min-height: 100%;
         }
         & .dropdown-submenu-left {
           right: 100%;
