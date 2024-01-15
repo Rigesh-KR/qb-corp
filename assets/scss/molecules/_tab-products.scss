@@ -1,6 +1,9 @@
 $opacity: 0.35;
 
 .qbc-prdct {
+  &__list{
+    margin-bottom: $spacer-6;
+  }
   &__main {
     .qbc-heading {
       text-align: center;

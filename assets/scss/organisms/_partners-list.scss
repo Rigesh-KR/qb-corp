@@ -1,0 +1,108 @@
+#partners-body{
+    position: relative;
+    z-index: 2;
+}
+.qbc-partnersList{
+    margin-bottom:60px;
+    &__inn{
+        display: flex;
+    }
+    &__count{
+        .qbc-mapView__tile--countries{
+            position: unset;
+            width: 120px;
+            margin-right: $spacer-0;
+        }
+        .qbc-mapView__tile-head{
+            font-size: 90px;
+            line-height: 80px;
+            margin-top: 10px;
+        }
+    }
+    &__list{
+        display: flex;
+        width:100%;
+        flex-wrap: wrap;
+        &-item{
+            width: calc(14.28% - 32px);
+            padding: $spacer-2 $spacer-1 ;
+            margin: 0 16px;
+            margin-bottom:$spacer-4;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid $color-grey3;
+            img{
+                width: auto;
+                height: 45px;
+                margin-bottom: $spacer-2;
+            }
+        }
+        p{
+            font-size: 13px;
+            text-align: center;
+            color: $color-black;
+            font-weight: $font-medium;
+        }
+    }
+
+    
+}
+@include tablet-pro{
+    .qbc-partnersList{
+        &__list{
+            &-item{
+                width: calc(25% - 16px);
+                margin: 0 8px;
+                padding: $spacer-2 $spacer-3 ;
+            }
+        }
+
+    }
+}
+@include tablet{
+    .qbc-partnersList{
+        &__list{
+            &-item{
+                width: calc(25% - 16px);
+                margin: 0 8px;
+            }
+        }
+
+    }
+}
+@include mobile{
+    .qbc-partnersList{
+        &__inn{
+            display: flex;
+            flex-direction: column;
+        }
+        &__count{
+            margin-bottom: $spacer-3;
+            .qbc-mapView__tile--countries{
+                flex-direction: row;
+                margin: 0;
+                padding: 0;
+                border: 0;
+                align-items: center;
+            }
+            .qbc-mapView__tile-head{
+                font-size: 32px !important;
+                margin-right: 10px;
+            }
+            .qbc-mapView__tile-body{
+                font-size: 20px;
+            }
+        }
+        &__list{
+            display: flex;
+            justify-content: space-between;
+            &-item{
+                width: calc(47% - 0px);
+                margin: 0;
+                margin-bottom: $spacer-3;
+            }
+        }
+    }
+}

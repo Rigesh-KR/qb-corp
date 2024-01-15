@@ -157,7 +157,7 @@
   &__in {
     position: relative;
     min-height: 635px;
-    margin-bottom: $spacer-6;
+    margin-bottom: 60px;
   }
   &__tile {
     display: flex;
@@ -222,6 +222,7 @@
 }
 .qbc-prdct-hide {
   display: none;
+
 }
 @include tablet {
   .qbc-mapView {
