@@ -5,7 +5,8 @@
     background-repeat: no-repeat;
     background-size: 100%;
     position: absolute;
-    top: 0;
+    top: 0px;
+    left: 0px;
     width: 100%;
     height: 100%;
     z-index: 1;
@@ -35,8 +36,8 @@
       fill: $color-lamb;
     }
     .qbc-mapView__prdctimg {
-      left: 120px;
-      top: 380px;
+      left: 130px;
+      top: 420px;
       img {
         max-width: 90px;
       }
@@ -52,9 +53,9 @@
     svg {
       fill: $color-FrozenMeat;
     }
-    .qbc-mapView__tile--products {
-      transform: translate(50%, 0);
-    }
+    // .qbc-mapView__tile--products {
+    //   transform: translate(-20%, 0);
+    // }
     // .qbc-mapView__tile--prdctimg{
     //     left: 120px;
     //     top: 380px;
@@ -73,13 +74,17 @@
   }
   &--CheeseDairy {
     .qbc-mapView__in {
-      min-height: 670px;
+      min-height: 730px;
     }
     .qbc-mapView__tile-body {
       color: $color-cheese;
     }
     svg {
       fill: $color-cheese;
+    }
+    .qbc-mapView__tile--products{
+      left: 25%;
+      transform: translate(0%, 30px);
     }
   }
   &--Seafood {
@@ -92,6 +97,13 @@
     svg {
       fill: $color-SeaFood;
     }
+    .qbc-mapView__prdctimg {
+      left: 130px;
+      top: 450px;
+      img {
+        max-width: 200px;
+      }
+    }
   }
   &--PantryEssentials {
     .qbc-mapView__in {
@@ -103,8 +115,9 @@
     svg {
       fill: $color-pantry;
     }
-    .qbc-mapView__tile--products {
-      transform: translate(50%, 20px);
+    .qbc-mapView__tile--products{
+      left: 25%;
+      transform: translate(0%, 30px);
     }
   }
   &--Beverages {
@@ -122,6 +135,13 @@
     svg {
       fill: $color-PlantBased;
     }
+    .qbc-mapView__prdctimg {
+      left: 100px;
+      top: 450px;
+      img {
+        max-width: 200px;
+      }
+    }
   }
   &--Beverages {
     .qbc-mapView__tile-body {
@@ -136,7 +156,14 @@
     //     min-height:670px;
     // }
     .qbc-mapView__prdctimg {
-      top: 380px;
+      left: 100px;
+      top: 450px;
+      img {
+        max-width: 200px;
+      }
+    }
+    .qbc-mapView__tile--partners{
+      top: 555px;
     }
 
     .qbc-mapView__tile-body {
@@ -173,7 +200,7 @@
     }
     &--countries {
       left: 60px;
-      top: 55px;
+      top: 125px;
       .qbc-mapView__tile-head {
         font-size: 110px;
         line-height: 100px;
@@ -184,16 +211,16 @@
       // top: 75%;
       // transform: translate(-35%, 70px);
       transform: translate(-25%, 0);
-      top: 565px;
+      top: 600px;
       .qbc-mapView__tile-head {
         font-size: 50px;
         line-height: 50px;
       }
     }
     &--partners {
-      right: 22%;
-      top: 435px;
-      transform: translate(-50%, 0);
+      right: 25%;
+      top: 485px;
+      transform: translate(-65%, 0);
       // top: 75%;
       // transform: translate(-50%, 30px);
       .qbc-mapView__tile-head {
@@ -214,9 +241,9 @@
     position: absolute;
     left: 70px;
     // bottom: 0;
-    top: 430px;
+    top: 485px;
     img {
-      max-width: 250px;
+      max-width: 225px;
     }
   }
 }
@@ -224,8 +251,66 @@
   display: none;
 
 }
+@include tablet-pro{
+  .qbc-mapView {
+    &__tile{
+      &--countries{
+        top: 75px;
+      }
+      &--products {
+        top: 490px;
+      }
+      &--partners {
+        top: 390px;
+        transform: translate(-37px, 0);
+      }
+    }
+    &__prdctimg {
+      position: absolute;
+      left: 40px;
+      top: 365px;
+    }
+    &--ChilledLamb {
+      .qbc-mapView__prdctimg {
+        top: 380px;
+        left: 165px;
+        img{
+          max-width:70px;
+        }
+      }
+    }
+    &--Seafood {
+      .qbc-mapView__prdctimg {
+        top: 380px;
+        left: 115px;
+        img{
+          max-width: 155px;
+        }
+      }
+    }
+    &--plantBased {
+      .qbc-mapView__prdctimg {
+        top: 370px;
+        left: 100px;
+        img{
+          max-width: 155px;
+        }
+      }
+    }
+    &--AssortedFrozen {
+      .qbc-mapView__prdctimg {
+        top: 370px;
+        left: 100px;
+        img{
+          max-width: 155px;
+        }
+      }
+    }
+  }
+}
 @include tablet {
   .qbc-mapView {
+    margin-top: 30px;
     &__in {
       min-height: 430px;
     }
@@ -235,7 +320,7 @@
     &__tile {
       &--countries {
         left: 35px;
-        top: 0px;
+        top: 40px;
         .qbc-mapView__tile-head {
           font-size: 85px;
           line-height: 80px;
@@ -246,10 +331,14 @@
         top: 360px;
       }
       &--partners {
-        top: 280px;
-        transform: translate(0, 0);
+        top: 295px;
+        transform: translate(-15px, 0);
         // right: 19%;
         // bottom: 10%;
+        .qbc-mapView__tile-head {
+          font-size: 50px;
+          line-height:40px;
+        }
       }
     }
     &__prdctimg {
@@ -261,9 +350,9 @@
     &--ChilledLamb {
       .qbc-mapView__prdctimg {
         left: 110px;
-        top: 240px;
+        top: 280px;
         img {
-          max-width: 60px;
+          max-width: 50px;
         }
       }
     }
@@ -274,12 +363,39 @@
     }
     &--CheeseDairy {
       .qbc-mapView__in {
-        min-height: 430px;
+        min-height: 500px;
       }
     }
     &--PantryEssentials {
       .qbc-mapView__in {
         min-height: 430px;
+      }
+    }
+    &--Seafood {
+      .qbc-mapView__prdctimg {
+        top: 265px;
+        left: 70px;
+        img{
+          max-width: 125px;
+        }
+      }
+    }
+    &--plantBased {
+      .qbc-mapView__prdctimg {
+        top: 275px;
+        left: 70px;
+        img{
+          max-width: 125px;
+        }
+      }
+    }
+    &--AssortedFrozen {
+      .qbc-mapView__prdctimg {
+        top: 275px;
+        left: 70px;
+        img{
+          max-width: 125px;
+        }
       }
     }
   }
@@ -325,7 +441,7 @@
     }
     &--ChilledBeef {
       .qbc-mapView__prdctimg {
-        top: 220px;
+        top: 230px;
         left: 15px;
         img {
           max-width: 80px;
@@ -349,7 +465,7 @@
         min-height: 210px;
       }
       .qbc-mapView__prdctimg {
-        top: 220px;
+        top: 230px;
         left: 15px;
         img {
           max-width: 80px;
@@ -357,14 +473,26 @@
       }
     }
     &--CheeseDairy {
+      .qbc-mapView__map{
+        min-height: 195px;
+      }
       .qbc-mapView__in {
         min-height: auto;
       }
       .qbc-mapView__prdctimg {
-        top: 220px;
+        top: 230px;
         left: 15px;
         img {
           max-width: 80px;
+        }
+      }
+    }
+    &--Seafood {
+      .qbc-mapView__prdctimg {
+        top: 225px;
+        left: 25px;
+        img {
+          max-width: 70px;
         }
       }
     }
@@ -385,19 +513,19 @@
     }
     &--plantBased {
       .qbc-mapView__prdctimg {
-        top: 220px;
-        left: 15px;
+        top: 230px;
+        left: 40px;
         img {
-          max-width: 80px;
+          max-width: 50px;
         }
       }
     }
     &--AssortedFrozen {
       .qbc-mapView__prdctimg {
-        top: 210px;
-        left: 15px;
+        top: 230px;
+        left: 40px;
         img {
-          max-width: 60px;
+          max-width: 50px;
         }
       }
     }
