@@ -161,7 +161,7 @@
           border-left: 8px solid $color-red;
         }
         .dropdown-submenu {
-          display: none;
+          // display: none;
           position: absolute;
           left: 100%;
           // top: 0;
@@ -227,6 +227,7 @@
         &[aria-labelledby="brand-dropdown"] {
           .dropdown-submenu {
             position: static;
+            transform: translateY(0);
             &.show {
               display: block !important;
             }
@@ -241,12 +242,12 @@
           .dropdown-m-drop {
             display: inline-block;
           }
-          & > li:hover > .dropdown-submenu {
-            display: none;
-          }
-          .dropdown-menu > li:hover > .dropdown-submenu {
-            display: none;
-          }
+          // & > li:hover > .dropdown-submenu {
+          //   display: none;
+          // }
+          // .dropdown-menu > li:hover > .dropdown-submenu {
+          //   display: none;
+          // }
         }
       }
     }

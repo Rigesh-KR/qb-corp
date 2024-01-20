@@ -8,14 +8,18 @@
       width: calc(50% - 16px);
       margin: 0 8px;
       border: 0;
+      &:last-child{
+        margin-left: $spacer-6;
+      }
     }
     .accordion-header {
       .qbc-heading {
         font-size: 20px;
         margin-bottom: 0;
-        color: $color-yellow;
+        // color: $color-yellow;
+        color: var(--productTypeColor);
         font-weight: 600;
-        img {
+        img, svg {
           width: 18px;
         }
       }
@@ -24,7 +28,7 @@
         box-shadow: none;
         padding: 0;
         padding-bottom: 16px;
-        border-bottom: 2px solid $color-yellow;
+        border-bottom: 2px solid var(--productTypeColor);
         pointer-events: none;
         &::after {
           display: none;
@@ -52,7 +56,8 @@
     font-weight: 700;
     color: $color-black2;
     padding-bottom: 8px;
-    border-bottom: 1px solid $color-black2;
+    // border-bottom: 1px solid $color-black2;
+    border-bottom: 1px solid var(--productTypeColor);
     &:last-child {
       border: 0;
     }
@@ -110,6 +115,9 @@
       .accordion-item {
         width: calc(100% - 16px);
         margin-bottom: 16px;
+        &:last-child{
+          margin-left: $spacer-0;
+        }
       }
       .accordion-header {
         .qbc-heading {

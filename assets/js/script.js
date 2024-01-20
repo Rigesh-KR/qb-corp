@@ -156,23 +156,52 @@ if ((link1, link2)) {
   }
 }
 
-document.querySelectorAll(".dropdown-menu").forEach((drop) => {
-  drop.addEventListener("click", (e) => {
-    if (e.target.classList.contains("dropdown-m-drop")) {
-      e.stopPropagation();
-      let cel = e.target.nextSibling.nextElementSibling.nextElementSibling;
-      while (cel) {
-        if (cel.classList.contains("dropdown-submenu")) break;
-        cel = cel.nextElementSibling;
-      }
+// prevent closing of datepicker (filter) on click inside
+const datepicker = document.querySelectorAll(".dropdown-menu");
 
-      if (cel) {
-        if (cel.classList.contains("show")) {
-          cel.classList.remove("show");
-        } else {
-          cel.classList.add("show");
-        }
-      }
+datepicker?.forEach((datepicker) => {
+  datepicker.addEventListener("click", (e) => {
+    if (datepicker.classList.contains("show")) {
+      e.target.tagName !== "BUTTON" && e.stopPropagation();
     }
   });
-});
+})
+
+function removeshow() {
+  menu_subitem.forEach((e) => {
+    e.classList.remove('show');
+  })
+}
+
+const menu_item = document.querySelectorAll('.na-navlink');
+const menu_subitem = document.querySelectorAll('.dropdown-submenu');
+
+if (window.innerWidth < 600) {
+  menu_item.forEach((e, index) => {
+    e.addEventListener('click', (item) => {
+      removeshow()
+      menu_subitem[index].classList.add('show');
+    })
+  })
+}
+// document.querySelectorAll(".dropdown-menu").forEach((drop) => {
+//   drop.addEventListener("click", (e) => {
+//     if (e.target.classList.contains("dropdown-m-drop")) {
+//       e.stopPropagation();
+//       e.preventDefault();
+//       let cel = e.target.nextSibling.nextElementSibling.nextElementSibling;
+//       while (cel) {
+//         if (cel.classList.contains("dropdown-submenu")) break;
+//         cel = cel.nextElementSibling;
+//       }
+
+//       if (cel) {
+//         if (cel.classList.contains("show")) {
+//           cel.classList.remove("show");
+//         } else {
+//           cel.classList.add("show");
+//         }
+//       }
+//     }
+//   });
+// });
