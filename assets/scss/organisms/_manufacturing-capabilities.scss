@@ -1,8 +1,10 @@
 .qbc-mc{
+    padding: $spacer-5 0;
     &__in{
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-gap: 30px;
+        padding: $spacer-6 0;
     }
     &__item1 {
         grid-column: 1/3;
