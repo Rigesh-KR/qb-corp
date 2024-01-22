@@ -27,10 +27,11 @@
 @import "molecules/chilldBeef-product";
 @import "molecules/product-type";
 @import "molecules/nested-dropdown";
-@import "molecules/robust-tile";
-@import "molecules/robust-head";
 @import "molecules/catalogue-head";
 @import "molecules/catalogue-status";
+@import "molecules/robust-tile";
+@import "molecules/types-of-items-tile";
+@import "molecules/robust-head";
 
 // organism
 @import "organisms/header";
@@ -44,4 +45,10 @@
 @import "organisms/experience";
 @import "organisms/product-list";
 @import "organisms/partners-list";
+@import "organisms/brand-partners";
+@import "organisms/channel-coverage";
+@import "organisms/manufacturing-capabilities";
+@import "organisms/types-of-items-wrap";
+@import "organisms/catalogue-links";
 @import "organisms/Robust";
+@import "organisms/catelogue-page";

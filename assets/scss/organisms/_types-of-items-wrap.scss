@@ -1,0 +1,13 @@
+.qbc-ti{
+    display: flex;
+    flex-wrap: wrap;
+}
+@include mobile-tablet{
+    .qbc-ti{
+        justify-content: space-between;
+        &__tile{
+            width: calc(48% - 0px);
+            margin: 0px 0px 30px;
+        }
+    }
+}

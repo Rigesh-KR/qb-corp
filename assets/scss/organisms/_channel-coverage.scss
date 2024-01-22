@@ -1,0 +1,50 @@
+.qbc-cc{
+    padding: $spacer-5 0 $spacer-5;
+    &__in{
+        padding: $spacer-6 0 $spacer-3;
+    }
+    &__list{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &__item{
+        width: calc(16.66% - 16px);
+        margin: 0px 8px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    &__img{
+        margin-bottom: $spacer-3;
+        img{
+            width: 100%;
+            border-radius: 30px;
+        }
+    }
+    &__title{
+        font-size:18px;
+        font-weight: $font-bold;
+        color: $color-green;
+    }
+}
+
+@include tablet{
+    .qbc-cc{
+        &__item{
+            width: calc(33.33% - 16px);
+            margin-bottom: $spacer-6;
+        }
+    }
+}
+@include mobile{
+    .qbc-cc{
+        &__list{
+            justify-content: space-between;
+        }
+        &__item{
+            width: calc(47% - 0px);
+            margin:0 0 $spacer-6;
+        }
+    }
+}
