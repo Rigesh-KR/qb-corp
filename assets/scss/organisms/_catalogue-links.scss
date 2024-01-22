@@ -40,7 +40,7 @@
         justify-content: center;
         img{
             transition: 0.3s;
-            width: 80%;
+            width: 100%;
             height: auto;
         }
     }
@@ -48,15 +48,23 @@
 
 @include tablet{
     .qbc-cat-links{
+        &__outer{
+            margin: 0 -16px;
+        }
         &__tile{
-            width: calc(25% - 64px);
+            width: calc(25% - 32px);
+            margin: 0  16px 32px;
         }
     }
 }
 @include mobile{
     .qbc-cat-links{
+        &__outer{
+            margin: 0 -16px;
+        }
         &__tile{
-            width: calc(50% - 64px);
+            width: calc(50% - 32px);
+            margin: 0  16px 32px;
         }
     }
 }
