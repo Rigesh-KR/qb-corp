@@ -91,6 +91,9 @@
     // .qbc-mapView__in{
     //     min-height:670px;
     // }
+    .qbc-mapView__tile--partners{
+      top: 505px;
+    }
     .qbc-mapView__tile-body {
       color: $color-SeaFood;
     }
@@ -287,6 +290,9 @@
           max-width: 155px;
         }
       }
+      .qbc-mapView__tile--partners{
+        top:400px;
+      }
     }
     &--plantBased {
       .qbc-mapView__prdctimg {
@@ -378,6 +384,9 @@
         img{
           max-width: 125px;
         }
+      }
+      .qbc-mapView__tile--partners{
+        top: 325px;
       }
     }
     &--plantBased {
