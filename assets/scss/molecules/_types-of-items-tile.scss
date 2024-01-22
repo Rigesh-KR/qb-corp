@@ -1,0 +1,68 @@
+.qbc-ti{
+    &__tile{
+        width: calc(33.33% - 32px);
+        margin: 0px 16px 30px;
+        display: flex;
+        align-items: flex-end;
+        flex-direction: column;
+        position: relative;
+        &:hover{
+            .qbc-ti__img{
+                img{
+                    transform:scale(1.1);
+                }
+            }
+        }
+    }
+    &__img{
+        font-size: 0;
+        overflow: hidden;
+        img{
+            width: 100%;
+            font-size: 0;
+            transition: all 0.5s;
+        }
+    }
+    &__body{
+        // background-color: var(--productTypeColor, 0.5);
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        &-in{
+            position: relative;
+            padding: $spacer-3 $spacer-3;
+            &:before{
+                content: "";
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                background-color: var(--productTypeColor);
+                opacity: 0.67;
+                z-index: 1;
+                bottom: 0;
+                left: 0;
+            }
+        }
+    }
+    &__cap{
+        font-size: 20px;
+        font-weight: $font-bold;
+        position: relative;
+        z-index: 2;
+        color: $color-white;
+        margin-bottom: $spacer-2;
+    }
+    &__location{
+        position: relative;
+        z-index: 2;
+        color: $color-white;
+        display: flex;
+        align-items: center;
+        svg{
+            fill: var(--productTypeColor);
+            width: 18px;
+            margin-right: $spacer-2;
+        }
+    }
+}
