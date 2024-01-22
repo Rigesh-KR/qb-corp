@@ -4,11 +4,11 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        margin: 0 -16px;
+        margin: 0 -32px;
     }
     &__tile{
-        width: calc(16.6% - 32px);
-        margin: 0 16px 32px;
+        width: calc(16.6% - 64px);
+        margin: 0 32px 32px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -30,16 +30,17 @@
     }
     &__tileimg{
         width: 100%;
-        min-height: 160px;
+        min-height: 140px;
         border: 1px solid var(--productTypeColor);
         padding: 8px;
         overflow: hidden;
         border-radius: 50%;
         display: flex;
         align-items: center;
+        justify-content: center;
         img{
             transition: 0.3s;
-            width: 100%;
+            width: 80%;
             height: auto;
         }
     }
@@ -48,14 +49,14 @@
 @include tablet{
     .qbc-cat-links{
         &__tile{
-            width: calc(25% - 32px);
+            width: calc(25% - 64px);
         }
     }
 }
 @include mobile{
     .qbc-cat-links{
         &__tile{
-            width: calc(50% - 32px);
+            width: calc(50% - 64px);
         }
     }
 }
