@@ -58,9 +58,9 @@
     padding-bottom: 8px;
     // border-bottom: 1px solid $color-black2;
     border-bottom: 1px solid var(--productTypeColor);
-    &:last-child {
-      border: 0;
-    }
+    // &:last-child {
+    //   border: 0;
+    // }
   }
   &__tileouter {
     display: flex;
