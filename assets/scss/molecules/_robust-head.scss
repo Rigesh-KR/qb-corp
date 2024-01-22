@@ -1,0 +1,42 @@
+.qbc-robust-head {
+    padding: $spacer-5 0;
+    &__sub {
+        color:$color-green;
+        text-align: center;
+        font-size: 18px;
+        font-weight: 700;
+        padding-bottom: $spacer-2;
+    }
+
+    &__title {
+        color: $color-red;
+        text-align: center;
+        font-size: 45px;
+        font-weight: 700;
+        padding-bottom: $spacer-2;
+    }
+
+    &__txt {
+        width: 80%;
+        margin: 0 auto;
+        color:$color-green;
+        text-align: center;
+        font-size: 16px;
+        font-weight: 400;
+    }
+
+    &--clr {
+        background-color: #FCFAF4;
+    }
+}
+
+@include mobile {
+    .qbc-robust-head {
+        &__title {
+            font-size: 32px;
+        }
+        &__txt {
+            width: 90%;
+        }
+    }
+}
