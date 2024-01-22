@@ -6,17 +6,76 @@
         justify-content: center;
         margin: 0 -32px;
         &--slick{
-            margin: 0;
+            display: block;
+            width: 80%;
+            margin: 0 auto;
+            .qbc-cat-links__tile{
+                padding: 0px;
+                margin: 0px;
+            }
+            .slick-prev.slick-disabled, .slick-next.slick-disabled{
+                opacity: 0;
+                // cursor: none;
+                pointer-events: none;
+            }
+            .slick-active-prodct{
+                .qbc-cat-links__tileimg{
+                    img{
+                        filter: grayscale(0);
+                    }  
+                }
+            }
             .qbc-cat-links__tileimg{
                 border: 0;
+                min-height: auto;
+                position: relative;
+                z-index: 1;
+                padding: 0;
+                img{
+                    filter: grayscale(1);
+                }
             }
             .qbc-cat-links__tile{
                 p{
                     font-size: 12px;
                     text-transform: uppercase;
-                    color: $color-grey;
-                    margin-top: -35px;
+                    color: #898989;
+                    margin-top: -30px;
+                    position: relative;
+                    z-index: 2;
+                    font-weight: $font-bold;
                 }
+                &:hover{
+                    .qbc-cat-links__tileimg{
+                        img{
+                            filter: grayscale(0);
+                        }
+                    }
+                }
+            }
+            .slick-prev, .slick-next {
+                width: 37px;
+                height: 37px;
+                z-index: 99;
+                transform: translate(0, 0);
+                background-color: #fff;
+                border-radius: 50%;
+                box-shadow: (1px 7px 16.2px rgba(0, 0, 0, 0.08));
+            }
+            .slick-prev::before, .slick-next::before {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 8px;
+                left: 50%;
+                transform: translate(-25%, 0);
+                content: "" !important;
+                background-image: url(../images/arrow-slick.svg);
+                background-position: left top;
+                background-repeat: no-repeat;
+            }
+            .slick-prev{
+                transform: rotate(-180deg);
             }
         }
     }
@@ -59,11 +118,49 @@
         }
     }
 }
-
+@include tablet-pro{
+    .qbc-cat-links{
+        &__outer{
+            margin: 0 -16px;
+            &--slick{
+                display: block;
+                width: 100%;
+                margin: 0 auto;
+                .slick-prev {
+                    left: 0;
+                }
+                .slick-next{
+                    right: 0;
+                }
+                .qbc-cat-links__tile{
+                    p{
+                        margin-top: -55px;
+                    }
+                }
+            }
+        }
+    }
+}
 @include tablet{
     .qbc-cat-links{
         &__outer{
             margin: 0 -16px;
+            &--slick{
+                display: block;
+                width: 100%;
+                margin: 0 auto;
+                .slick-prev {
+                    left: 0;
+                }
+                .slick-next{
+                    right: 0;
+                }
+                .qbc-cat-links__tile{
+                    p{
+                        margin-top: -40px;
+                    }
+                }
+            }
         }
         &__tile{
             width: calc(25% - 32px);
@@ -75,6 +172,23 @@
     .qbc-cat-links{
         &__outer{
             margin: 0 -16px;
+            &--slick{
+                display: block;
+                width: 100%;
+                margin: 0 auto;
+
+                .slick-prev {
+                    left: 0;
+                }
+                .slick-next{
+                    right: 0;
+                }
+                .qbc-cat-links__tile{
+                    p{
+                        margin-top: -40px;
+                    }
+                }
+            }
         }
         &__tile{
             width: calc(50% - 32px);

@@ -209,20 +209,30 @@ document.querySelectorAll(".dropdown-menu").forEach((drop) => {
 $(".qbc-cat-links__outer--slick").slick({
   arrows: true,
   dots: false,
-  infinite: true,
-  autoplay: true,
+  infinite: false,
+  autoplay: false,
   speed: 1000,
   autoplaySpeed: 5000,
-  slidesToShow: 6,
+  slidesToShow: 7,
   slidesToScroll: 1,
+  // centerMode: true,
   responsive: [
+    {
+      breakpoint: 1200,
+      settings: {
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        infinite: true,
+        dots: false,
+      },
+    },
     {
       breakpoint: 1024,
       settings: {
-        slidesToShow: 1,
+        slidesToShow: 4,
         slidesToScroll: 1,
         infinite: true,
-        dots: true,
+        dots: false,
       },
     },
     {
@@ -235,7 +245,7 @@ $(".qbc-cat-links__outer--slick").slick({
     {
       breakpoint: 480,
       settings: {
-        slidesToShow: 1,
+        slidesToShow: 2,
         slidesToScroll: 1,
       },
     },

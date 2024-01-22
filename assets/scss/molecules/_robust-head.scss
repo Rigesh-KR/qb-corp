@@ -32,6 +32,7 @@
 
 @include mobile {
     .qbc-robust-head {
+        padding: $spacer-3 0;
         &__title {
             font-size: 32px;
         }
