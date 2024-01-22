@@ -1,0 +1,102 @@
+.qbc-mc{
+    &__in{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 30px;
+    }
+    &__item1 {
+        grid-column: 1/3;
+        grid-row: 1/2;
+        background-color:$color-green;
+        border-radius: 10px;
+        padding: $spacer-6;
+    }
+    &__subHead{
+        font-size: 25px;
+        color: $color-white;
+        font-weight: $font-regular;
+    }
+    &__Head{
+        font-size:35px;
+        color: $color-white;
+        font-weight: $font-bold;
+        border-bottom: 1px solid $color-white;
+        padding-bottom: $spacer-4;
+        margin-bottom: $spacer-4;
+    }
+    &__text{
+        font-size:16px;
+        color: $color-white;
+        font-weight: $font-regular;
+        margin-bottom: $spacer-5;
+    }
+    &__item2{
+        display: flex;
+        flex-direction: column;
+        grid-column: 3/4;
+        grid-row: 1/2;
+        img{
+            width: 100%;
+            &:first-child{
+                margin-bottom: $spacer-3;
+            }
+        }
+    }
+    &__list{
+        margin-left: 20px;
+        &-item{
+            font-size:16px;
+            color: $color-white;
+            font-weight: $font-regular;
+            margin-bottom: $spacer-2; 
+            position: relative;
+            padding-left: 12px;
+            &::before{
+                position: absolute;
+                content:"";
+                width: 4px;
+                height: 4px;
+                background-color: $color-white;
+                border-radius: 50%;
+                left: 0;
+                top: 8px;
+            }
+        }
+    }
+}
+@include tablet-pro{
+    .qbc-mc{
+        &__in{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+        }
+        &__item1{
+            grid-column: 1/2;
+        }
+        &__item2{
+            grid-column: 2/3;
+        }
+    }
+}
+@include mobile-tablet{
+    .qbc-mc{
+        &__in{
+            display: flex;
+            flex-direction: column;
+        }
+        &__item1 {
+            width: 100%;
+        }
+        &__item2 {
+            width: 100%;
+            flex-direction: row;
+            justify-content: space-between;
+            img{
+                &:first-child{
+                    margin: 0;
+                }
+                width: 48%;
+            }
+        }
+    }
+}

@@ -1,0 +1,31 @@
+.qbc-bp{
+    &__in{
+        padding: $spacer-4 0;
+    }
+    &__list{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    &__item{
+        width: 12.5%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: $spacer-3 $spacer-1;
+        img{
+            width: auto;
+            height: 50px;
+        }
+    }
+}
+@include mobile{
+    .qbc-bp{
+        &__list{
+            justify-content: center;
+        }
+        &__item{
+            width: 50%;
+        }
+    }
+}
