@@ -5,6 +5,20 @@
         flex-wrap: wrap;
         justify-content: center;
         margin: 0 -32px;
+        &--slick{
+            margin: 0;
+            .qbc-cat-links__tileimg{
+                border: 0;
+            }
+            .qbc-cat-links__tile{
+                p{
+                    font-size: 12px;
+                    text-transform: uppercase;
+                    color: $color-grey;
+                    margin-top: -35px;
+                }
+            }
+        }
     }
     &__tile{
         width: calc(16.6% - 64px);
