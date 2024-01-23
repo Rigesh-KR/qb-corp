@@ -91,6 +91,9 @@
     // .qbc-mapView__in{
     //     min-height:670px;
     // }
+    .qbc-mapView__tile--partners{
+      top: 505px;
+    }
     .qbc-mapView__tile-body {
       color: $color-SeaFood;
     }
@@ -253,6 +256,9 @@
 }
 @include tablet-pro{
   .qbc-mapView {
+    .qbc-mapView__in {
+      min-height:520px;
+    }
     &__tile{
       &--countries{
         top: 75px;
@@ -287,6 +293,9 @@
           max-width: 155px;
         }
       }
+      .qbc-mapView__tile--partners{
+        top:400px;
+      }
     }
     &--plantBased {
       .qbc-mapView__prdctimg {
@@ -312,7 +321,7 @@
   .qbc-mapView {
     margin-top: 30px;
     &__in {
-      min-height: 430px;
+      min-height:380px !important;
     }
     // &__map{
     //     background-position: right 70px;
@@ -356,21 +365,21 @@
         }
       }
     }
-    &--FrozenMeat {
-      .qbc-mapView__in {
-        min-height: 430px;
-      }
-    }
-    &--CheeseDairy {
-      .qbc-mapView__in {
-        min-height: 500px;
-      }
-    }
-    &--PantryEssentials {
-      .qbc-mapView__in {
-        min-height: 430px;
-      }
-    }
+    // &--FrozenMeat {
+    //   .qbc-mapView__in {
+    //     min-height: 430px;
+    //   }
+    // }
+    // &--CheeseDairy {
+    //   .qbc-mapView__in {
+    //     min-height: 500px;
+    //   }
+    // }
+    // &--PantryEssentials {
+    //   .qbc-mapView__in {
+    //     min-height: 430px;
+    //   }
+    // }
     &--Seafood {
       .qbc-mapView__prdctimg {
         top: 265px;
@@ -378,6 +387,9 @@
         img{
           max-width: 125px;
         }
+      }
+      .qbc-mapView__tile--partners{
+        top: 325px;
       }
     }
     &--plantBased {

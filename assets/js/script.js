@@ -184,24 +184,73 @@ if (window.innerWidth < 600) {
     })
   })
 }
-// document.querySelectorAll(".dropdown-menu").forEach((drop) => {
-//   drop.addEventListener("click", (e) => {
-//     if (e.target.classList.contains("dropdown-m-drop")) {
-//       e.stopPropagation();
-//       e.preventDefault();
-//       let cel = e.target.nextSibling.nextElementSibling.nextElementSibling;
-//       while (cel) {
-//         if (cel.classList.contains("dropdown-submenu")) break;
-//         cel = cel.nextElementSibling;
-//       }
+document.querySelectorAll(".dropdown-menu").forEach((drop) => {
+  drop.addEventListener("click", (e) => {
+    if (e.target.classList.contains("dropdown-m-drop")) {
+      e.stopPropagation();
+      e.preventDefault();
+      let cel = e.target.nextSibling.nextElementSibling.nextElementSibling;
+      while (cel) {
+        if (cel.classList.contains("dropdown-submenu")) break;
+        cel = cel.nextElementSibling;
+      }
 
-//       if (cel) {
-//         if (cel.classList.contains("show")) {
-//           cel.classList.remove("show");
-//         } else {
-//           cel.classList.add("show");
-//         }
-//       }
-//     }
-//   });
-// });
+      if (cel) {
+        if (cel.classList.contains("show")) {
+          cel.classList.remove("show");
+        } else {
+          cel.classList.add("show");
+        }
+      }
+    }
+  });
+});
+// CATELOGUE LINKS
+$(".qbc-cat-links__outer--slick").slick({
+  arrows: true,
+  dots: false,
+  infinite: false,
+  autoplay: false,
+  speed: 1000,
+  autoplaySpeed: 5000,
+  slidesToShow: 7,
+  slidesToScroll: 1,
+  // centerMode: true,
+  responsive: [
+    {
+      breakpoint: 1200,
+      settings: {
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        infinite: true,
+        dots: false,
+      },
+    },
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        infinite: true,
+        dots: false,
+      },
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+      },
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1,
+      },
+    },
+    // You can unslick at a given breakpoint now by adding:
+    // settings: "unslick"
+    // instead of a settings object
+  ],
+});
