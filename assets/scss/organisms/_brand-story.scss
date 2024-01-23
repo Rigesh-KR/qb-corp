@@ -1,0 +1,59 @@
+.qbc-brand-story{
+    &__outer{
+        display: flex;
+        align-items: flex-start;
+        padding: 40px 0 0;
+        margin: 0 -16px;
+    }
+    &__left{
+        width: calc(50% - 32px);
+        margin: 0 16px;
+        border-top: 2px solid var(--productTypeColor);
+        padding-top: 16px;
+        min-height: 500px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        p{
+            margin-bottom: 16px;
+            font-size: 16px;
+            color: $color-black-1;
+        }
+    }
+    &__right{
+        width: calc(50% - 32px);
+        margin: 0 16px;
+        border-top: 10px solid var(--productTypeColor);
+        img{
+            width: 100%;
+        }
+    }
+    .qbc-heading{
+        font-size: 30px;
+        color: $color-black-1;
+        svg{
+            width: 20px;
+            height: 20px;
+            margin-left: 8px;
+            fill: var(--productTypeColor);
+        }
+    }
+    &__logo{
+        display: flex;
+        justify-content: flex-end;
+        img{
+            max-height: 170px;
+        }
+    }
+    &__link{
+        display: block;
+        color: var(--productTypeColor);
+        font-size: 18px;
+        transition: 0.3s;
+        &:hover{
+            color: var(--productTypeColor);
+            transform: translateX(4px);
+            transition: 0.3s;
+        }
+    }
+}
