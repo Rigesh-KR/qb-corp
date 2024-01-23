@@ -74,6 +74,7 @@
 }
 @include mobile{
     .qbc-partnersList{
+        margin-bottom: 0;
         &__inn{
             display: flex;
             flex-direction: column;
@@ -93,6 +94,7 @@
             }
             .qbc-mapView__tile-body{
                 font-size: 20px;
+                margin-top: 10px;
             }
         }
         &__list{
