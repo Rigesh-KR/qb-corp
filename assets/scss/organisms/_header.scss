@@ -130,8 +130,9 @@
       }
 
       &[aria-labelledby="products-dropdown"] {
-        min-width: 64vw;
-        width: 100%;
+        // min-width: 64vw;
+        // width: 100%;
+        min-width: 800px;
         left: -100%;
       }
 
@@ -304,9 +305,10 @@
       .dropdown-menu {
         margin-top: 0 !important;
         padding-top: 15px !important;
-        padding-bottom: 0px !important;
+        padding-bottom: 10px !important;
         .dropdown-menu{
           padding-top: 0px !important;
+          padding-bottom: 0px !important;
         }
         &[aria-labelledby="brand-dropdown"] {
           .dropdown-submenu {
