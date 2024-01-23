@@ -256,6 +256,9 @@
 }
 @include tablet-pro{
   .qbc-mapView {
+    .qbc-mapView__in {
+      min-height:520px;
+    }
     &__tile{
       &--countries{
         top: 75px;
@@ -318,7 +321,7 @@
   .qbc-mapView {
     margin-top: 30px;
     &__in {
-      min-height: 430px;
+      min-height:380px !important;
     }
     // &__map{
     //     background-position: right 70px;
@@ -362,21 +365,21 @@
         }
       }
     }
-    &--FrozenMeat {
-      .qbc-mapView__in {
-        min-height: 430px;
-      }
-    }
-    &--CheeseDairy {
-      .qbc-mapView__in {
-        min-height: 500px;
-      }
-    }
-    &--PantryEssentials {
-      .qbc-mapView__in {
-        min-height: 430px;
-      }
-    }
+    // &--FrozenMeat {
+    //   .qbc-mapView__in {
+    //     min-height: 430px;
+    //   }
+    // }
+    // &--CheeseDairy {
+    //   .qbc-mapView__in {
+    //     min-height: 500px;
+    //   }
+    // }
+    // &--PantryEssentials {
+    //   .qbc-mapView__in {
+    //     min-height: 430px;
+    //   }
+    // }
     &--Seafood {
       .qbc-mapView__prdctimg {
         top: 265px;
