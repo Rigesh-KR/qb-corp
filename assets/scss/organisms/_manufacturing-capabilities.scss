@@ -102,3 +102,11 @@
         }
     }
 }
+@include mobile-tablet{
+    .qbc-mc{
+        &__item1 {
+            width: 100%;
+            padding: 20px;
+        }
+    }
+}

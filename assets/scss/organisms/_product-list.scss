@@ -52,15 +52,18 @@
   }
   &__items {
     margin-top: 8px;
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 700;
     color: $color-black2;
     padding-bottom: 8px;
     // border-bottom: 1px solid $color-black2;
     border-bottom: 1px solid var(--productTypeColor);
-    &:last-child {
-      border: 0;
-    }
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+    // &:last-child {
+    //   border: 0;
+    // }
   }
   &__tileouter {
     display: flex;
