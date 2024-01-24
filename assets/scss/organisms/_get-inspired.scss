@@ -1,0 +1,23 @@
+.qbc-inspired{
+    &__outer{
+        display: flex;
+        align-items: center;
+    }
+    &__left{
+        width: 50%;
+        img{
+            width: 100%;
+        }
+    }
+    &__right{
+        width: 50%;
+        padding-left: 40px;
+        p{
+            font-size: 16px;
+            margin-bottom: 16px;
+        }
+    }
+    .qbc-heading{
+        color: $color-black-1;
+    }
+}
