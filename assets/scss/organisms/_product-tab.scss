@@ -28,9 +28,11 @@
         margin-left: -35px;
         z-index: 1;
     }
+
     &__arrowr.slick-disabled {
         display: none;
     }
+    
     &__arrowl.slick-disabled {
         display: none !important;
     }
