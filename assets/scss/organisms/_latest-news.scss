@@ -1,0 +1,82 @@
+.qbc-latest-news{
+    &__imgsec{
+        width: 100%;
+        height: auto;
+        border-top: 10px solid var(--productTypeColor);
+        img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+    &__textsec{
+        display: flex;
+        margin: 40px -32px 0;
+    }
+    &__textleft{
+        width: calc(50% - 64px);
+        margin: 0 32px;
+        text-align: right;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+    &__textright{
+        width: calc(50% - 64px);
+        margin: 0 32px;
+        p{
+            line-height: 1.5;
+        }
+    }
+    &__subtitle{
+        color: var(--productTypeColor);
+        font-size: 18px;
+        font-weight: 700;
+        margin-bottom: 16px;
+    }
+    &__title{
+        width: 85%;
+        font-size: 28px;
+        color: $color-black-1;
+        margin-bottom: 24px;
+    }
+}
+
+@include tablet{
+    .qbc-latest-news{
+        &__textright{
+            p{
+                font-size: 15px;
+            }
+        }
+        &__subtitle{
+            font-size: 16px;
+        }
+        &__title{
+            width: 100%;
+            font-size: 25px;
+        }
+    }
+}
+
+@include mobile{
+    .qbc-latest-news{
+        &__textsec{
+            flex-direction: column;
+        }
+        &__textleft{
+            width: calc(100% - 64px);
+            text-align: left;
+            align-items: flex-start;
+        }
+        &__textright{
+            width: calc(100% - 64px);
+            margin: 24px 32px 0;
+        }
+        &__subtitle{
+            font-size: 16px;
+        }
+        &__title{
+            font-size: 25px;
+        }
+    }
+}
