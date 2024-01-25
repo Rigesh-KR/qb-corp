@@ -1,4 +1,7 @@
 .qbc-mainbanner {
+  &.partners {
+    border-bottom: 8px solid var(--productTypeColor);
+  }
   padding: 30px 0;
   color: $color-almond;
   position: relative;

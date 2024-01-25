@@ -23,6 +23,7 @@
     &__icontile{
         height: auto;
         margin-right: 40px;
+        
     }
     &__icon{
         display: flex;
@@ -31,6 +32,10 @@
         text-align: center;
         color: var(--productTypeColor);
         transition: 0.3s;
+        &.disable {
+            opacity: 0.4;
+            pointer-events: none;
+        }
         &>div{
             width: 55px;
         }

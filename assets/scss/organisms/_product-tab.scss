@@ -1,4 +1,5 @@
 .qbc-product-tab {
+    padding-bottom: 40px;
     &__prdct {
         width: 70%;
         height: auto;
@@ -60,8 +61,37 @@
     }
     &__right {
         width: 50%;
+        padding-left: 40px;
         .qbc-brand-story__left {
             width: 100%;
+        }
+
+        ul {
+            li {
+                a {
+                    color: var(--productTypeColor);
+                    text-decoration: underline;
+                    font-size: 16px;
+                    font-weight: 600;
+                    text-transform: capitalize;
+                    &:hover {
+                        color: var(--productTypeColor);
+                    }
+                }
+                position: relative;
+                padding-left: 16px;
+                padding-bottom: 8px;
+                &::after {
+                    position: absolute;
+                    content: "";
+                    width: 5px;
+                    height: 5px;
+                    left: 0;
+                    top: 26%;
+                    background-color: var(--productTypeColor);
+                    border-radius: 50%;
+                }
+            }
         }
     }
     &__heading {
@@ -97,36 +127,10 @@
         font-weight: 400;
         padding-bottom: 32px;
     }
-    &__list {
-        li {
-            a {
-                color: var(--productTypeColor);
-                text-decoration: underline;
-                font-size: 16px;
-                font-weight: 600;
-                text-transform: capitalize;
-                &:hover {
-                    color: var(--productTypeColor);
-                }
-            }
-            position: relative;
-            padding-left: 16px;
-            padding-bottom: 8px;
-            &::after {
-                position: absolute;
-                content: "";
-                width: 5px;
-                height: 5px;
-                left: 0;
-                top: 26%;
-                background-color: var(--productTypeColor);
-                border-radius: 50%;
-            }
-        }
-    }
+
     .nav-tabs {
         border: 0;
-        width: 60%;
+        width: 50%;
         margin-bottom: 24px;
         .nav-item {
             width: 25%;
@@ -139,6 +143,7 @@
         flex-direction: column;
         align-items: center;
         border: 0;
+        padding: 0;
         p {
             font-size: 14px;
             color: $color-black-1;
@@ -159,9 +164,9 @@
         .nav-tabs {
             width: 70%;
         }
-        &__slick-out {
-            justify-content: center;
-        }
+        // &__slick-out {
+        //     justify-content: center;
+        // }
     }
 }
 
@@ -169,6 +174,10 @@
     .qbc-product-tab {
         .nav-tabs {
             width: 70%;
+            .nav-item {
+                width: 50%;
+                padding-bottom: 32px;
+            }
         }
         &__slick-out {
             justify-content: center;
@@ -179,6 +188,7 @@
         }
         &__right {
             width: 100%;
+            padding-left: 0;
         }
         &__out {
             flex-direction: column;
