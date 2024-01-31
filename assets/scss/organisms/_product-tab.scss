@@ -48,6 +48,19 @@
        display: flex;
        align-items: center;
     }
+    &__tab-out{
+        max-width: 500px;
+        overflow-x: scroll;
+        .nav-tabs{
+            min-width: 800px;
+            .nav-item{
+                width: unset !important;
+            }
+        }
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
 
     &__left {
         width: 50%;

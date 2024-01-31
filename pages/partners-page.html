@@ -727,50 +727,61 @@
     <div class="content-wrapper">
 
       <div class="qbc-product-tab__slick-out">
-        <!-- <div class="qbc-product-tab__arrowl">
-            <img src="../assets/images/tab-arrow.png" alt="">
-          </div> -->
-        <ul class="nav nav-tabs" id="myTab" role="tablist">
-          <li class="nav-item" role="presentation">
-            <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#product-1" type="button"
-              role="tab" aria-controls="home" aria-selected="true">
-              <div class="qbc-product-tab__prdct">
-                <img src="../assets/images/tab-product-1.png" alt="">
-              </div>
-              <p>SMOKED SAUSAGES</p>
-            </button>
-          </li>
-          <li class="nav-item" role="presentation">
-            <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#product-4" type="button"
-              role="tab" aria-controls="profile" aria-selected="false">
-              <div class="qbc-product-tab__prdct">
-                <img src="../assets/images/tab-product-2.png" alt="">
-              </div>
-              <p>SAUSAGES</p>
-            </button>
-          </li>
-          <li class="nav-item" role="presentation">
-            <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#product-4" type="button"
-              role="tab" aria-controls="contact" aria-selected="false">
-              <div class="qbc-product-tab__prdct">
-                <img src="../assets/images/tab-product-3.png" alt="">
-              </div>
-              <p>BRATWURSTS</p>
-            </button>
-          </li>
-          <li class="nav-item" role="presentation">
-            <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#product-4" type="button"
-              role="tab" aria-controls="contact" aria-selected="false">
-              <div class="qbc-product-tab__prdct">
-                <img src="../assets/images/tab-product-4.png" alt="">
-              </div>
-              <p>MEATBALLS</p>
-            </button>
-          </li>
-        </ul>
-        <!-- <div class="qbc-product-tab__arrowr">
-            <img src="../assets/images/tab-arrow.png" alt="">
-          </div> -->
+        <div class="qbc-product-tab__arrowl">
+          <img src="../assets/images/tab-arrow.png" alt="">
+        </div>
+        <div class="qbc-product-tab__tab-out">
+          <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#product-1"
+                type="button" role="tab" aria-controls="home" aria-selected="true">
+                <div class="qbc-product-tab__prdct">
+                  <img src="../assets/images/tab-product-1.png" alt="">
+                </div>
+                <p>SMOKED SAUSAGES</p>
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#product-4" type="button"
+                role="tab" aria-controls="profile" aria-selected="false">
+                <div class="qbc-product-tab__prdct">
+                  <img src="../assets/images/tab-product-2.png" alt="">
+                </div>
+                <p>SAUSAGES</p>
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#product-4" type="button"
+                role="tab" aria-controls="contact" aria-selected="false">
+                <div class="qbc-product-tab__prdct">
+                  <img src="../assets/images/tab-product-3.png" alt="">
+                </div>
+                <p>BRATWURSTS</p>
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#product-4" type="button"
+                role="tab" aria-controls="contact" aria-selected="false">
+                <div class="qbc-product-tab__prdct">
+                  <img src="../assets/images/tab-product-4.png" alt="">
+                </div>
+                <p>MEATBALLS</p>
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#product-4" type="button"
+                role="tab" aria-controls="contact" aria-selected="false">
+                <div class="qbc-product-tab__prdct">
+                  <img src="../assets/images/tab-product-4.png" alt="">
+                </div>
+                <p>MEATBALLS</p>
+              </button>
+            </li>
+          </ul>
+        </div>
+        <div class="qbc-product-tab__arrowr">
+          <img src="../assets/images/tab-arrow.png" alt="">
+        </div>
       </div>
       <div class="tab-content" id="myTabContent">
         <div class="tab-pane fade show active" id="product-1" role="tabpanel" aria-labelledby="product-1">
@@ -1137,6 +1148,43 @@
   <script src="../assets/js/slick.min.js"></script>
   <script src="../assets/js/bootstrap.bundle.min.js"></script>
   <script src="../assets/js/script.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var scrollableNav = document.querySelector(".qbc-product-tab__tab-out");
+      var scrollRightBtn = document.querySelector(".qbc-product-tab__arrowr");
+      var scrollLeftBtn = document.querySelector(".qbc-product-tab__arrowl");
+
+      // scrollRightBtn.addEventListener("click", function () {
+      //   scrollableNav.scrollBy({ left: 120, behavior: "smooth" });
+      // });
+
+      // scrollLeftBtn.addEventListener("click", function () {
+      //   scrollableNav.scrollBy({ left: -120, behavior: "smooth" });
+      // });
+      function updateScrollButtons() {
+        var canScrollRight = scrollableNav.scrollWidth > scrollableNav.clientWidth + scrollableNav.scrollLeft;
+        var canScrollLeft = scrollableNav.scrollLeft > 0;
+
+        scrollRightBtn.disabled = !canScrollRight;
+        scrollLeftBtn.disabled = !canScrollLeft;
+      }
+
+      // Update scroll buttons initially
+      updateScrollButtons();
+
+      // Listen for clicks on the right arrow button
+      scrollRightBtn.addEventListener("click", function () {
+        scrollableNav.scrollBy({ left: 120, behavior: "smooth" });
+        updateScrollButtons();
+      });
+
+      // Listen for clicks on the left arrow button
+      scrollLeftBtn.addEventListener("click", function () {
+        scrollableNav.scrollBy({ left: -120, behavior: "smooth" });
+        updateScrollButtons();
+      });
+    });
+  </script>
   <!-- scripts -->
 </body>
 
