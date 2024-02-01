@@ -307,7 +307,13 @@ document.addEventListener("DOMContentLoaded", function () {
   function setMinWidth() {
       const totalWidth = Array.from(tiles).reduce((sum, e) => sum + e.offsetWidth, 0);
       tileContainer.style.minWidth = totalWidth + 'px';
-      console.log(totalWidth);
+      if (totalWidth < 500) {
+        scrollLeftBtn.style.display = 'none';
+        scrollRightBtn.style.display = 'none';
+    } else {
+        scrollLeftBtn.style.display = 'block';
+        scrollRightBtn.style.display = 'block';
+    }
   }
 
   function updateScrollButtons() {
