@@ -10,6 +10,7 @@
     }
 
     &__arrowr,&__arrowl {
+        position: absolute;
         width: 20px;
         height: 20px;
         margin-top: 30px;
@@ -23,11 +24,14 @@
     &__slick-out {
         display: flex;
         align-items: flex-start;
+        position: relative;
+        max-width: 500px;
     }
 
     &__arrowr {
         margin-left: -35px;
         z-index: 1;
+        right: -25px;
     }
 
     &__arrowr.slick-disabled {
@@ -39,6 +43,7 @@
     }
 
     &__arrowl {
+        left: -25px;
         transform: rotate(180deg);
         margin-right: -35px;
         z-index: 1;
@@ -53,8 +58,9 @@
         overflow-x: scroll;
         .nav-tabs{
             min-width: 800px;
+            flex-wrap: nowrap;
             .nav-item{
-                width: unset !important;
+                width: 135px !important;
             }
         }
         &::-webkit-scrollbar {
@@ -209,6 +215,12 @@
         &__arrowr,&__arrowl {
             margin: 20px 0 0 0;
             z-index: 1;
+        }
+        &__arrowr{
+            right: 0;
+        }
+        &__arrowl{
+            left: 0;
         }
     }
 }

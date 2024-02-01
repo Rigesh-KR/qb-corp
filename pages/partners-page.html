@@ -1148,44 +1148,6 @@
   <script src="../assets/js/slick.min.js"></script>
   <script src="../assets/js/bootstrap.bundle.min.js"></script>
   <script src="../assets/js/script.js"></script>
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      var scrollableNav = document.querySelector(".qbc-product-tab__tab-out");
-      var scrollRightBtn = document.querySelector(".qbc-product-tab__arrowr");
-      var scrollLeftBtn = document.querySelector(".qbc-product-tab__arrowl");
-
-      // scrollRightBtn.addEventListener("click", function () {
-      //   scrollableNav.scrollBy({ left: 120, behavior: "smooth" });
-      // });
-
-      // scrollLeftBtn.addEventListener("click", function () {
-      //   scrollableNav.scrollBy({ left: -120, behavior: "smooth" });
-      // });
-      function updateScrollButtons() {
-        var canScrollRight = scrollableNav.scrollWidth > scrollableNav.clientWidth + scrollableNav.scrollLeft;
-        var canScrollLeft = scrollableNav.scrollLeft > 0;
-
-        scrollRightBtn.disabled = !canScrollRight;
-        scrollLeftBtn.disabled = !canScrollLeft;
-      }
-
-      // Update scroll buttons initially
-      updateScrollButtons();
-
-      // Listen for clicks on the right arrow button
-      scrollRightBtn.addEventListener("click", function () {
-        scrollableNav.scrollBy({ left: 120, behavior: "smooth" });
-        updateScrollButtons();
-      });
-
-      // Listen for clicks on the left arrow button
-      scrollLeftBtn.addEventListener("click", function () {
-        scrollableNav.scrollBy({ left: -120, behavior: "smooth" });
-        updateScrollButtons();
-      });
-    });
-  </script>
-  <!-- scripts -->
 </body>
 
 </html>

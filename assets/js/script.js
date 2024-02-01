@@ -294,3 +294,33 @@ $('.qbc-jhnvil-slide').slick({
     // instead of a settings object
   ]
 });
+
+// tab links scroll
+
+document.addEventListener("DOMContentLoaded", function () {
+  const scrollableNav = document.querySelector(".qbc-product-tab__tab-out");
+  const scrollRightBtn = document.querySelector(".qbc-product-tab__arrowr");
+  const scrollLeftBtn = document.querySelector(".qbc-product-tab__arrowl");
+  const tileContainer = document.querySelector('#myTab');
+  const tiles = document.querySelectorAll(".qbc-product-tab__tab-out .nav-item");
+
+  function setMinWidth() {
+      const totalWidth = Array.from(tiles).reduce((sum, e) => sum + e.offsetWidth, 0);
+      tileContainer.style.minWidth = totalWidth + 'px';
+      console.log(totalWidth);
+  }
+
+  function updateScrollButtons() {
+      const isAtMinWidth = scrollableNav.scrollLeft <= 0;
+      const isAtMaxRight = scrollableNav.scrollLeft + scrollableNav.clientWidth >= scrollableNav.scrollWidth;
+
+      scrollLeftBtn.style.display = isAtMinWidth ? 'none' : 'block';
+      scrollRightBtn.style.display = isAtMaxRight ? 'none' : 'block';
+  }
+
+  window.onload = setMinWidth;
+  scrollRightBtn.addEventListener("click", () => scrollableNav.scrollBy({ left: 120, behavior: "smooth" }));
+  scrollLeftBtn.addEventListener("click", () => scrollableNav.scrollBy({ left: -120, behavior: "smooth" }));
+  scrollableNav.addEventListener("scroll", updateScrollButtons);
+  updateScrollButtons();
+});
