@@ -60,7 +60,7 @@
             min-width: 800px;
             flex-wrap: nowrap;
             .nav-item{
-                width: 135px !important;
+                width: unset !important;
             }
         }
         &::-webkit-scrollbar {
