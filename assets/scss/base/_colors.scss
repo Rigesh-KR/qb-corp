@@ -50,7 +50,15 @@ $color-veg: #61c527;
 $color-drygoods: #7d499c;
 $color-bakery: #a5663a;
 
-:root .qbc-clr.johnsonvilla {
+:root .qbc-clr.red {
     --productTypeColor: #a20c33;
+}
+
+:root .qbc-clr.green  {
+    --productTypeColor: #5B7E2D;
+}
+
+:root .qbc-clr.blue   {
+    --productTypeColor: #5BBCAD;
 }
 
