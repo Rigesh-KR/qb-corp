@@ -127,6 +127,11 @@
         font-weight: 600;
         margin-right: 8px;
         }
+        svg{
+            path{
+                fill: var(--productTypeColor);
+            }
+        }
     }
     &__title {
         color: $color-black-1;

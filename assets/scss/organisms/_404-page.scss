@@ -1,0 +1,31 @@
+.qbc-404{
+    padding: 40px 0;
+    min-height: calc(100vh - 263px);
+    display: flex;
+    align-items: center;
+    &__outer{
+        margin: 0 auto;
+        width: 60%;
+        img{
+            width: 100%;
+        }
+    }
+}
+
+@include tablet{
+    .qbc-404{
+        min-height: calc(80vh - 263px);
+        &__outer{
+            width: 100%;
+        }
+    }
+}
+
+@include mobile{
+    .qbc-404{
+        min-height: calc(80vh - 263px);
+        &__outer{
+            width: 100%;
+        }
+    }
+}
