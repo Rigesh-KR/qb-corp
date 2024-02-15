@@ -50,7 +50,93 @@ $color-veg: #61c527;
 $color-drygoods: #7d499c;
 $color-bakery: #a5663a;
 
-:root .qbc-clr.johnsonvilla {
+
+// brand colors
+
+:root .qbc-clr.johnsonville {
     --productTypeColor: #a20c33;
+}
+
+:root .qbc-clr.black-angus  {
+    --productTypeColor: #000000;
+}
+
+:root .qbc-clr.filippo   {
+    --productTypeColor: #5B7E2D;
+}
+:root .qbc-clr.granarolo {
+    --productTypeColor: #5BBCAD;
+}
+:root .qbc-clr.swift  {
+    --productTypeColor: #C4200A;
+}
+:root .qbc-clr.tradition  {
+    --productTypeColor: #B80000;
+}
+:root .qbc-clr.butchers  {
+    --productTypeColor: #C0001E;
+}
+:root .qbc-clr.butterball  {
+    --productTypeColor: #FCD405;
+}
+:root .qbc-clr.cape-herb {
+    --productTypeColor: #E80101;
+}
+:root .qbc-clr.creapan {
+    --productTypeColor: #F57E23;
+}
+:root .qbc-clr.ehrmann {
+    --productTypeColor: #E20015;
+}
+:root .qbc-clr.emina-dessert {
+    --productTypeColor: #D6001D;
+}
+:root .qbc-clr.garcia {
+    --productTypeColor: #DB0812;
+}
+:root .qbc-clr.happy-cow {
+    --productTypeColor: #EB1E26;
+}
+:root .qbc-clr.hyfun-foods {
+    --productTypeColor: #77B252;
+}
+:root .qbc-clr.jack-links {
+    --productTypeColor: #DA2F27;
+}
+:root .qbc-clr.kilcoy {
+    --productTypeColor: #5BC6E8;
+}
+:root .qbc-clr.knead-it  {
+    --productTypeColor: #B99F64;
+}
+:root .qbc-clr.la-corvinia  {
+    --productTypeColor: #446428;
+}
+:root .qbc-clr.lemnos  {
+    --productTypeColor: #282B6A;
+}
+:root .qbc-clr.paysan  {
+    --productTypeColor: #ED2128;
+}
+:root .qbc-clr.quorn  {
+    --productTypeColor: #F07E00;
+}
+:root .qbc-clr.santa  {
+    --productTypeColor: #00539B;
+}
+:root .qbc-clr.tatua {
+    --productTypeColor: #57263B;
+}
+:root .qbc-clr.teys {
+    --productTypeColor: #002855;
+}
+:root .qbc-clr.tine {
+    --productTypeColor: #ED2128;
+}
+:root .qbc-clr.nibbles {
+    --productTypeColor: #EE7B1D;
+}
+:root .qbc-clr.kolios {
+    --productTypeColor: #2F3579;
 }
 

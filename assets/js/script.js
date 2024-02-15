@@ -304,15 +304,17 @@ document.addEventListener("DOMContentLoaded", function () {
   const tileContainer = document.querySelector('#myTab');
   const tiles = document.querySelectorAll(".qbc-product-tab__tab-out .nav-item");
 
-  function setMinWidth() {
-      const totalWidth = Array.from(tiles).reduce((sum, e) => sum + e.offsetWidth, 0);
-      tileContainer.style.minWidth = totalWidth + 'px';
-      if (totalWidth < 500) {
-        scrollLeftBtn.style.display = 'none';
-        scrollRightBtn.style.display = 'none';
-    } else {
-        scrollLeftBtn.style.display = 'block';
-        scrollRightBtn.style.display = 'block';
+  if(scrollLeftBtn){
+    function setMinWidth() {
+        const totalWidth = Array.from(tiles).reduce((sum, e) => sum + e.offsetWidth, 0);
+        tileContainer.style.minWidth = totalWidth + 'px';
+        if (totalWidth < 500) {
+          scrollLeftBtn.style.display = 'none';
+          scrollRightBtn.style.display = 'none';
+      } else {
+          scrollLeftBtn.style.display = 'block';
+          scrollRightBtn.style.display = 'block';
+      }
     }
   }
 
@@ -324,9 +326,11 @@ document.addEventListener("DOMContentLoaded", function () {
       scrollRightBtn.style.display = isAtMaxRight ? 'none' : 'block';
   }
 
-  window.onload = setMinWidth;
-  scrollRightBtn.addEventListener("click", () => scrollableNav.scrollBy({ left: 120, behavior: "smooth" }));
-  scrollLeftBtn.addEventListener("click", () => scrollableNav.scrollBy({ left: -120, behavior: "smooth" }));
-  scrollableNav.addEventListener("scroll", updateScrollButtons);
-  updateScrollButtons();
+  if(scrollRightBtn){
+    window.onload = setMinWidth;
+    scrollRightBtn.addEventListener("click", () => scrollableNav.scrollBy({ left: 120, behavior: "smooth" }));
+    scrollLeftBtn.addEventListener("click", () => scrollableNav.scrollBy({ left: -120, behavior: "smooth" }));
+    scrollableNav.addEventListener("scroll", updateScrollButtons);
+    updateScrollButtons();
+  }
 });

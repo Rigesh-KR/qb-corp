@@ -44,10 +44,18 @@
         }
     }
     &__link{
-        display: block;
+        display: inline-block;
         color: var(--productTypeColor);
         font-size: 18px;
         transition: 0.3s;
+        &--blue {
+            color: #18A9E7;
+            &:hover {
+                transform: translateX(4px);
+                transition: 0.3s;
+                color: #18A9E7 !important;
+            }
+        }
         &:hover{
             color: var(--productTypeColor);
             transform: translateX(4px);
