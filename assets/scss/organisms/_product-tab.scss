@@ -1,4 +1,7 @@
 .qbc-product-tab {
+    .fade{
+        opacity: 1 !important;
+    }
     padding-bottom: 40px;
     &__prdct {
         width: 70%;
@@ -184,7 +187,7 @@
         }
     }
 
-    .nav-link.active {
+    .nav-link.active,.nav-item.active {
         p {
             color: var(--productTypeColor);
             width: 130px;
