@@ -735,49 +735,49 @@
           <div class="qbc-product-tab__tab-out">
             <ul class="nav nav-tabs" id="myTab" role="tablist">
               <li class="nav-item" role="presentation">
-                <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#product-1"
-                  type="button" role="tab" aria-controls="home" aria-selected="true">
+                <a href="#product-1" class="nav-link active" id="home-tab" data-bs-toggle="tab"
+                  data-bs-target="#product-1" type="button" role="tab" aria-controls="home" aria-selected="true">
                   <div class="qbc-product-tab__prdct">
                     <img src="../assets/images/tab-product-1.png" alt="">
                   </div>
                   <p>SMOKED SAUSAGES</p>
-                </button>
+                </a>
               </li>
               <li class="nav-item" role="presentation">
-                <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#product-2" type="button"
-                  role="tab" aria-controls="profile" aria-selected="false">
+                <a href="#product-2" class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#product-2"
+                  type="button" role="tab" aria-controls="profile" aria-selected="false">
                   <div class="qbc-product-tab__prdct">
                     <img src="../assets/images/tab-product-2.png" alt="">
                   </div>
                   <p>SAUSAGES</p>
-                </button>
+                </a>
               </li>
               <li class="nav-item" role="presentation">
-                <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#product-3" type="button"
-                  role="tab" aria-controls="contact" aria-selected="false">
+                <a href="#product-3" class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#product-3"
+                  type="button" role="tab" aria-controls="contact" aria-selected="false">
                   <div class="qbc-product-tab__prdct">
                     <img src="../assets/images/tab-product-3.png" alt="">
                   </div>
                   <p>BRATWURSTS</p>
-                </button>
+                </a>
               </li>
               <li class="nav-item" role="presentation">
-                <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#product-4" type="button"
-                  role="tab" aria-controls="contact" aria-selected="false">
+                <a href="#product-4" class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#product-4"
+                  type="button" role="tab" aria-controls="contact" aria-selected="false">
                   <div class="qbc-product-tab__prdct">
                     <img src="../assets/images/tab-product-4.png" alt="">
                   </div>
                   <p>MEATBALLS</p>
-                </button>
+                </a>
               </li>
               <li class="nav-item" role="presentation">
-                <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#product-4" type="button"
-                  role="tab" aria-controls="contact" aria-selected="false">
+                <a href="#product-5" class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#product-4"
+                  type="button" role="tab" aria-controls="contact" aria-selected="false">
                   <div class="qbc-product-tab__prdct">
                     <img src="../assets/images/tab-product-4.png" alt="">
                   </div>
                   <p>MEATBALLS</p>
-                </button>
+                </a>
               </li>
             </ul>
           </div>
@@ -786,6 +786,7 @@
           </div>
         </div>
         <div class="tab-content" id="myTabContent">
+          <!-- tab1 -->
           <div class="tab-pane fade show active" id="product-1" role="tabpanel" aria-labelledby="product-1">
             <div class="qbc-product-tab__out">
               <div class="qbc-product-tab__left">
@@ -820,14 +821,23 @@
                     eat!</p>
                 </div>
                 <a href="#" class="qbc-brand-story__link qbc-brand-story__link--blue">Read More &gt;&gt;</a>
-                <ul>
-                  <li><a href="#product-2">ORIGINAL SMOKED SAUSAGES</a></li>
-                  <li><a href="#product-3">BEDDAR wITH CHEDDAR SAUSAGES</a></li>
+                <ul class="nav nav-tabs qbc-product-tab__list" role="tablist">
+                  <li role="presentation" class="active"><a href="#product-2" aria-controls="home" role="tab"
+                      data-toggle="tab">ORIGINAL SMOKED
+                      SAUSAGES</a></li>
+                  <li role="presentation"><a href="#product-3" aria-controls="profile" role="tab"
+                      data-toggle="tab">BEDDAR wITH CHEDDAR
+                      SAUSAGES</a></li>
+                  <li role="presentation"><a href="#product-4" aria-controls="profile" role="tab"
+                      data-toggle="tab">BEDDAR wITH CHEDDAR
+                      SAUSAGES</a></li>
                 </ul>
               </div>
             </div>
           </div>
-          <div class="tab-pane fade" id="product-2" role="tabpanel" aria-labelledby="product-2">
+          <!-- tab2 -->
+          <div class="tab-pane fade" id="product-2" role="tabpanel" aria-labelledby="product-2"
+            style="background-color: red;">
             <div class="tab-pane fade show active" id="product-2" role="tabpanel" aria-labelledby="home-tab">
               <div class="qbc-product-tab__out">
                 <div class="qbc-product-tab__left">
@@ -859,15 +869,24 @@
                     eat!
                   </p>
 
-                  <ul class="qbc-product-tab__list">
-                    <li><a href="#">ORIGINAL SMOKED SAUSAGES</a></li>
-                    <li><a href="#">BEDDAR wITH CHEDDAR SAUSAGES</a></li>
+                  <ul class="nav nav-tabs qbc-product-tab__list" role="tablist">
+                    <li role="presentation" class="active"><a href="#product-2" aria-controls="home" role="tab"
+                        data-toggle="tab">ORIGINAL SMOKED
+                        SAUSAGES</a></li>
+                    <li role="presentation"><a href="#product-3" aria-controls="profile" role="tab"
+                        data-toggle="tab">BEDDAR wITH CHEDDAR
+                        SAUSAGES</a></li>
+                    <li role="presentation"><a href="#product-4" aria-controls="profile" role="tab"
+                        data-toggle="tab">BEDDAR wITH CHEDDAR
+                        SAUSAGES</a></li>
                   </ul>
                 </div>
               </div>
             </div>
           </div>
-          <div class="tab-pane fade" id="product-3" role="tabpanel" aria-labelledby="product-3">
+          <!-- tab3 -->
+          <div class="tab-pane fade" id="product-3" role="tabpanel" aria-labelledby="product-3"
+            style="background-color: blue;">
             <div class="tab-pane fade show active" id="product-3" role="tabpanel" aria-labelledby="home-tab">
               <div class="qbc-product-tab__out">
                 <div class="qbc-product-tab__left">
@@ -898,15 +917,24 @@
                     on the go, our Quick Delights are your answer to a satisfying and flavorful meal – just heat and
                     eat!
                   </p>
-                  <ul class="qbc-product-tab__list">
-                    <li><a href="#">ORIGINAL SMOKED SAUSAGES</a></li>
-                    <li><a href="#">BEDDAR wITH CHEDDAR SAUSAGES</a></li>
+                  <ul class="nav nav-tabs qbc-product-tab__list" role="tablist">
+                    <li role="presentation" class="active"><a href="#product-2" aria-controls="home" role="tab"
+                        data-toggle="tab">ORIGINAL SMOKED
+                        SAUSAGES</a></li>
+                    <li role="presentation"><a href="#product-3" aria-controls="profile" role="tab"
+                        data-toggle="tab">BEDDAR wITH CHEDDAR
+                        SAUSAGES</a></li>
+                    <li role="presentation"><a href="#product-4" aria-controls="profile" role="tab"
+                        data-toggle="tab">BEDDAR wITH CHEDDAR
+                        SAUSAGES</a></li>
                   </ul>
                 </div>
               </div>
             </div>
           </div>
-          <div class="tab-pane fade" id="product-4" role="tabpanel" aria-labelledby="product-4">
+          <!-- tab4 -->
+          <div class="tab-pane fade" id="product-4" role="tabpanel" aria-labelledby="product-4"
+            style="background-color: green;">
             <div class="tab-pane fade show active" id="product-4" role="tabpanel" aria-labelledby="home-tab">
               <div class="qbc-product-tab__out">
                 <div class="qbc-product-tab__left">
@@ -937,9 +965,16 @@
                     on the go, our Quick Delights are your answer to a satisfying and flavorful meal – just heat and
                     eat!
                   </p>
-                  <ul class="qbc-product-tab__list">
-                    <li><a href="#">ORIGINAL SMOKED SAUSAGES</a></li>
-                    <li><a href="#">BEDDAR wITH CHEDDAR SAUSAGES</a></li>
+                  <ul class="nav nav-tabs qbc-product-tab__list" role="tablist">
+                    <li role="presentation" class="active"><a href="#product-2" aria-controls="home" role="tab"
+                        data-toggle="tab">ORIGINAL SMOKED
+                        SAUSAGES</a></li>
+                    <li role="presentation"><a href="#product-3" aria-controls="profile" role="tab"
+                        data-toggle="tab">BEDDAR wITH CHEDDAR
+                        SAUSAGES</a></li>
+                    <li role="presentation"><a href="#product-4" aria-controls="profile" role="tab"
+                        data-toggle="tab">BEDDAR wITH CHEDDAR
+                        SAUSAGES</a></li>
                   </ul>
                 </div>
               </div>
@@ -1166,28 +1201,6 @@
   <script src="../assets/js/slick.min.js"></script>
   <script src="../assets/js/bootstrap.bundle.min.js"></script>
   <script src="../assets/js/script.js"></script>
-  <!-- <script>
-    const menuHeight = document.querySelectorAll('.dropdown-submenu--level2 .dropdown-submenu--level2');
-    const mainMenu = document.querySelectorAll('.dropdown-submenu--level2');
-    mainMenu.forEach((e) => {
-      e.addEventListener('mouseover', () => {
-
-      })
-    })
-    menuHeight.forEach((e, index) => {
-      e.addEventListener('mouseover', () => {
-        const pos = e.getBoundingClientRect();
-        const bottomOffset = pos.bottom - window.innerHeight;
-        if ((bottomOffset > -50)) {
-          console.log('hoi', (e.clientHeight));
-          // maxHeight();
-        }
-      })
-    })
-    // window.addEventListener('load', () => {
-    //   // console.log(pos);
-    // })
-  </script> -->
 </body>
 
 </html>
