@@ -94,7 +94,7 @@
                 transition: 0.3s;
             }
         }
-        .nav-item.active{
+        .nav-item.active,li.active{
             a{
                 opacity: 0.5;
             }
